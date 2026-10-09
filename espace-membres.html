@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espace membres | Arts Martiaux de Brunoy</title>
+  <meta name="description" content="Espace membres réservé aux adhérents de l'Association Arts Martiaux de Brunoy.">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="accueil1.html" class="header-brand">
+      <img src="images/logo.png" alt="Arts Martiaux de Brunoy" class="header-logo-img">
+      <span class="site-logo">Arts Martiaux de Brunoy</span>
+    </a>
+    
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+    
+    <nav class="site-nav" id="main-nav">
+      <a href="accueil1.html" class="nav-link">Instructeurs</a>
+      <a href="karate.html" class="nav-link">Karaté</a>
+      <a href="kobudo.html" class="nav-link">Kobudo</a>
+      <a href="tai-chi-chuan.html" class="nav-link">Tai Chi Chuan</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="bureau-amb.html" class="nav-link">Bureau AMB</a>
+      <a href="accueil1.html#contact" class="nav-link">Contact</a>
+      <a href="espace-membres.html" class="nav-link active">Espace membres</a>
+      <a href="espace-membres.html" class="header-member-btn btn-pulse">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        Se connecter
+      </a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section-inner" style="display:flex; justify-content:center;">
+    <div class="login-box" style="background:#fff; border:1px solid #ddd;  padding:2.5rem 2rem; width:100%; max-width:420px;  text-align:center;">
+      <img src="images/logo.png" alt="AMB" style="width:70px; margin:0 auto 1rem; display:block;">
+      <h2 style="font-family:'Oswald',sans-serif; font-size:1.6rem; color:#2b2b2b; margin-bottom:0.5rem;">Espace Membres AMB</h2>
+      <p style="font-size:0.9rem; color:#666; margin-bottom:1.5rem;">Connectez-vous pour accéder aux documents et informations réservés aux adhérents.</p>
+      
+      <form onsubmit="event.preventDefault(); alert('Connexion réussie !');" style="display:flex; flex-direction:column; gap:1rem;">
+        <input type="email" placeholder="Adresse e-mail" required style="padding:0.75rem; border:1px solid #ccc;  font-family:inherit;">
+        <input type="password" placeholder="Mot de passe" required style="padding:0.75rem; border:1px solid #ccc;  font-family:inherit;">
+        <button type="submit" style="background:#FFC800; color:#000000; font-weight:700; border:none; padding:0.85rem; font-family:'Oswald',sans-serif; font-size:1rem; font-weight:600; text-transform:uppercase; cursor:pointer; ">Se connecter</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      
+      <!-- COL 1: CLUB & PRÉSENTATION -->
+      <div class="footer-brand">
+        <a href="accueil1.html" class="footer-logo-row">
+          <img src="images/logo.png" alt="Arts Martiaux de Brunoy" class="footer-logo-img">
+          <span class="footer-brand-title">Arts Martiaux de Brunoy</span>
+        </a>
+        <p class="footer-brand-desc">
+          École de Karaté traditionnel (style Shorinji Ryu), maniement des armes anciennes (Kobudo) et pratique du Tai Chi Chuan à Brunoy (91).
+        </p>
+        <div class="footer-badge">
+          <span>Affilié FFKaraté & Agréé Pass Sport</span>
+        </div>
+      </div>
+
+      <!-- COL 2: NOS DISCIPLINES -->
+      <div>
+        <h4 class="footer-col-title">Disciplines</h4>
+        <ul class="footer-links-list">
+          <li><a href="karate.html">Karaté Shorinji Ryu</a></li>
+          <li><a href="kobudo.html">Kobudo (Armes Anciennes)</a></li>
+          <li><a href="tai-chi-chuan.html">Tai Chi Chuan</a></li>
+          <li><a href="galerie.html">Galerie Photos</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: INFOS PRATIQUES -->
+      <div>
+        <h4 class="footer-col-title">Informations</h4>
+        <ul class="footer-links-list">
+          <li><a href="accueil1.html">Instructeurs & Sensei</a></li>
+          <li><a href="bureau-amb.html">Bureau de l'AMB</a></li>
+          <li><a href="espace-membres.html">Tarifs & Inscriptions</a></li>
+          <li><a href="espace-membres.html">Espace Membres</a></li>
+          <li><a href="accueil1.html#contact">Contact & Accès</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: CONTACT & LIEU -->
+      <div class="footer-contact-info">
+        <h4 class="footer-col-title">Contact & Lieu</h4>
+        <p><strong>Gymnase Pierre de Coubertin</strong><br>Salle au 1er étage<br>7 rue de l'Espérance, 91800 Brunoy</p>
+        <p style="margin-top:0.75rem;"><strong>Horaires :</strong><br>Mardi & Vendredi (Karaté)<br>Samedi (Tai Chi Chuan)</p>
+      </div>
+
+    </div>
+
+    <!-- BARRE INFÉRIEURE : COPYRIGHT & MENTIONS OBLIGATOIRES -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Arts Martiaux de Brunoy. Tous droits réservés.</p>
+      <div class="footer-bottom-links">
+        <a href="mentions-legales.html">Mentions Légales</a>
+        <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+        <a href="accueil1.html#contact">Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
