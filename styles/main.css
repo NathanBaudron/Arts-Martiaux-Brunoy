@@ -918,33 +918,45 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 3.5rem;
+  margin-top: 2.5rem;
 }
 
+.aides-logo-item,
 .aides-logo-card {
-  background: #ffffff;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 12px 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  text-align: center;
 }
 
-.aides-logo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(255, 200, 0, 0.25);
-  border-color: #FFC800;
-}
-
+.aides-logo-item img,
+.aides-logo-card img,
 .aides-logos img {
-  height: 70px;
+  height: 80px;
   width: auto;
-  max-width: 180px;
+  max-width: 170px;
   object-fit: contain;
+  display: block;
+}
+
+.pass-sport-logo {
+  filter: drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 6px rgba(255, 255, 255, 0.45));
+}
+
+.aides-logo-caption {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #dddddd;
+  margin-top: 0.75rem;
+  letter-spacing: 0.03em;
 }
 
 /* ══════════════════════════════════════════════════════════════════
