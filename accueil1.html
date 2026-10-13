@@ -21,7 +21,8 @@
     <button class="mobile-toggle" id="mobile-toggle" aria-label="Ouvrir le menu">&#9776;</button>
     
     <nav class="site-nav" id="main-nav">
-      <a href="accueil1.html" class="nav-link active">Instructeurs</a>
+      <a href="accueil1.html" class="nav-link active">Accueil</a>
+      <a href="histoire.html" class="nav-link">Histoire</a>
       <a href="karate.html" class="nav-link">Karaté</a>
       <a href="kobudo.html" class="nav-link">Kobudo</a>
       <a href="tai-chi-chuan.html" class="nav-link">Tai Chi Chuan</a>
@@ -118,56 +119,32 @@
   </div>
 </section>
 
-<!-- NOS MAÎTRES & NOTRE SENSEI (FOND SOMBRE) -->
-<section class="section section-bg-dark" style="background:#0a0a0a;">
+<!-- ÉQUIPE ENSEIGNANTE (FOND SOMBRE) -->
+<section class="section section-bg-dark" style="background:#0a0a0a;" id="instructeurs">
   <div class="section-inner">
     
-    <!-- 1. HOMMAGE À NOS ANCIENS MAÎTRES ET NOTRE SENSEI ACTUELLE -->
-    <h2 class="section-title reveal" style="color:#ffffff;">NOS MAÎTRES & SENSEI</h2>
-    <p class="section-text reveal delay-1" style="text-align:center; margin-bottom:3rem; font-style:italic; color:#cccccc; font-size:1.05rem;">
-      Hommage à nos anciens Maîtres fondateurs et présentation de notre Sensei actuelle.
+    <h2 class="section-title reveal" style="color:#ffffff;">ÉQUIPE ENSEIGNANTE</h2>
+    <p class="section-text reveal delay-1" style="text-align:center; margin-bottom:2rem; color:#cccccc; font-size:1.05rem;">
+      Nos instructeurs et assistants bénévoles transmettent la rigueur et les valeurs du Karaté Shorinji Ryu et du Tai Chi Chuan.
     </p>
 
-    <div class="instructors-grid">
-      <!-- CARTE 1: SENSEI JEAN-RENÉ GIRAUD -->
-      <div class="instructor-card reveal delay-1">
-        <div class="instructor-photo-wrapper">
-          <img class="instructor-photo" src="images/portrait/Sensei_Jean-Rene.jpg" alt="Sensei Jean-René GIRAUD">
-        </div>
-        <div class="instructor-info">
-          <h3 style="color:#ffffff;">Sensei Jean-René GIRAUD</h3>
-          <p class="instructor-grade" style="color:#FFC800;">Ancien Maître (6e Dan)</p>
-          <p class="instructor-bio" style="color:#cccccc;">Fondateur & Maître méritant du club. Transmetteur de la tradition Karaté Shorinji Ryu à Brunoy.</p>
-        </div>
+    <!-- BANNIÈRE RENVOI VERS LA PAGE HISTOIRE -->
+    <div class="reveal delay-2" style="background:#151515; border:1px solid #2a2a2a; border-left:4px solid #FFC800; padding:1.25rem 1.75rem; margin-bottom:3.5rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1.25rem;">
+      <div>
+        <h4 style="font-family:'Oswald',sans-serif; color:#FFC800; font-size:1.15rem; text-transform:uppercase; margin-bottom:0.25rem;">
+          Lignée Martiale & Maîtres Fondateurs
+        </h4>
+        <p style="font-family:'Roboto',sans-serif; color:#bbbbbb; font-size:0.92rem; margin:0;">
+          Découvrez les origines historiques du style Shorinji Ryu d'Okinawa et l'hommage à nos Sensei fondateurs sur notre page dédiée.
+        </p>
       </div>
-
-      <!-- CARTE 2: SENSEI AMANDINE GIRAUD -->
-      <div class="instructor-card reveal delay-2">
-        <div class="instructor-photo-wrapper">
-          <img class="instructor-photo" src="images/portrait/Sensei_Amandine.jpg" alt="Sensei Amandine GIRAUD (TEISSEDRE)">
-        </div>
-        <div class="instructor-info">
-          <h3 style="color:#ffffff;">Sensei Amandine GIRAUD</h3>
-          <p class="instructor-grade" style="color:#FFC800;">Ancienne Maître (5e Dan)</p>
-          <p class="instructor-bio" style="color:#cccccc;">Grande figure de l'enseignement des arts martiaux traditionnels et de la transmission spirituelle du club.</p>
-        </div>
-      </div>
-
-      <!-- CARTE 3: SENSEI SOLANGE BUCQUET -->
-      <div class="instructor-card reveal delay-3" style="border-top-color:#FFC800; border-width:4px;">
-        <div class="instructor-photo-wrapper">
-          <img class="instructor-photo" src="images/portrait/Sensei_Solange.jpg" alt="Sensei Solange BUCQUET">
-        </div>
-        <div class="instructor-info">
-          <h3 style="color:#FFC800;">Sensei Solange BUCQUET</h3>
-          <p class="instructor-grade" style="color:#ffffff;">Notre Sensei Actuelle (4e Dan)</p>
-          <p class="instructor-bio" style="color:#cccccc;">Direction technique du club. Professeure référente de Karaté et de Tai Chi Chuan à Brunoy.</p>
-        </div>
-      </div>
+      <a href="histoire.html" class="header-member-btn" style="background:#FFC800; color:#111111; font-weight:700; font-size:0.85rem; padding:0.6rem 1.4rem; white-space:nowrap;">
+        Découvrir l'Histoire & nos Maîtres &rarr;
+      </a>
     </div>
 
-    <!-- 2. INSTRUCTEURS PRINCIPAUX DE KARATÉ -->
-    <div class="assistants-section" style="margin-top:4.5rem;">
+    <!-- 1. INSTRUCTEURS PRINCIPAUX DE KARATÉ -->
+    <div class="assistants-section" style="margin-top:1rem;">
       <h3 class="assistants-title reveal" style="color:#FFC800; font-size:1.8rem;">INSTRUCTEURS PRINCIPAUX DE KARATÉ</h3>
       <div class="instructors-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); justify-content:center;">
         
@@ -345,6 +322,7 @@
       <div>
         <h4 class="footer-col-title">Disciplines</h4>
         <ul class="footer-links-list">
+          <li><a href="histoire.html">Histoire & Tradition</a></li>
           <li><a href="karate.html">Karaté Shorinji Ryu</a></li>
           <li><a href="kobudo.html">Kobudo (Armes Anciennes)</a></li>
           <li><a href="tai-chi-chuan.html">Tai Chi Chuan</a></li>
@@ -356,7 +334,7 @@
       <div>
         <h4 class="footer-col-title">Informations</h4>
         <ul class="footer-links-list">
-          <li><a href="accueil1.html">Instructeurs & Sensei</a></li>
+          <li><a href="accueil1.html#instructeurs">Équipe Enseignante</a></li>
           <li><a href="bureau-amb.html">Bureau de l'AMB</a></li>
           <li><a href="espace-membres.html">Tarifs & Inscriptions</a></li>
           <li><a href="espace-membres.html">Espace Membres</a></li>
