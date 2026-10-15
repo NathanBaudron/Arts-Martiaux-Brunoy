@@ -1975,3 +1975,26 @@ img, img:hover,
     display: none !important;
   }
 }
+
+/* Home Page New Sections Responsive */
+.group-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.kobudo-home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .kobudo-home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
