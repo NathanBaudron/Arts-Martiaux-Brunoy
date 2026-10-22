@@ -117,7 +117,7 @@
       </div>
 
       <!-- Infos Licence & Médical — Résumé compact -->
-      <div style="margin-top:2rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+      <div style="margin-top:2rem; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem;">
         <div style="background:#fff; border:1px solid #e0e0e0; border-top:3px solid #FFC800; padding:1.25rem;">
           <h4 style="font-family:'Oswald',sans-serif; font-size:1rem; color:#111; text-transform:uppercase; margin-bottom:0.5rem;">Licence FFKaraté</h4>
           <ul style="padding-left:1rem; font-size:0.85rem; color:#555; line-height:1.7; margin:0;">
@@ -224,6 +224,7 @@
     <!-- PANEL 3 : MON ESPACE (PORTAIL ADHÉRENT)                -->
     <!-- ═══════════════════════════════════════════════════════ -->
     <div class="member-panel" id="panel-compte">
+      <div id="tab-compte"></div>
       
       <!-- État non connecté -->
       <div id="auth-logged-out" style="max-width:400px; margin:0 auto; background:#fff; border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:2rem;">
@@ -263,7 +264,7 @@
         </div>
 
         <!-- Indicateurs compacts -->
-        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin-bottom:1.5rem;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
           <div style="background:#f9f9f9; border:1px solid #eee; padding:1rem; text-align:center;">
             <span style="font-size:0.72rem; color:#888; text-transform:uppercase;">Dossier</span>
             <div style="font-family:'Oswald',sans-serif; font-size:1rem; color:#111; font-weight:700; margin-top:0.15rem;">Complet</div>
