@@ -4,91 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 — Page Introuvable | Arts Martiaux de Brunoy</title>
-  <meta name="description" content="Erreur 404 - La page demandée n'existe pas ou a été déplacée. Retournez sur le site officiel des Arts Martiaux de Brunoy.">
+  <meta name="description" content="Erreur 404 - Mini-jeu rétro pixel art Karateka inspired by Chrome Dino.">
   <link rel="icon" type="image/png" href="images/logo/logo.png">
   <link rel="apple-touch-icon" href="images/logo/logo.png">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    .page-404-hero {
-      background: radial-gradient(circle at center, #1c1c1c 0%, #0a0a0a 100%);
+    .retro-404-container {
+      background: #111111;
       color: #ffffff;
-      padding: 40px 20px 60px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      min-height: calc(100vh - 200px);
+      padding: 30px 16px 50px;
+      min-height: calc(100vh - 180px);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
     }
-    .canvas-container {
-      position: relative;
+    .retro-arcade-box {
+      background: #f7f7f7;
+      border: 4px solid #333333;
+      box-shadow: 0 8px 0 #000000;
+      padding: 16px;
+      max-width: 680px;
       width: 100%;
-      max-width: 720px;
-      height: 340px;
       margin: 1.5rem auto 1rem;
-      background: rgba(10, 10, 10, 0.6);
-      border: 1px solid #282828;
-      box-shadow: 0 0 30px rgba(0,0,0,0.8);
+      box-sizing: border-box;
+      position: relative;
+    }
+    #dinoCanvas {
+      width: 100%;
+      height: 240px;
+      display: block;
+      background: #f7f7f7;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-crisp-edges;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      cursor: pointer;
       user-select: none;
       touch-action: manipulation;
     }
-    #karateCanvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-      cursor: pointer;
+    .retro-score-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.72rem;
+      color: #535353;
+      margin-bottom: 8px;
+      padding: 0 4px;
+      letter-spacing: 0.05em;
     }
-    .game-hint {
-      font-size: 0.82rem;
+    .retro-instructions {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.65rem;
       color: #888888;
-      letter-spacing: 0.05em;
-      margin-top: 0.5rem;
+      margin-top: 14px;
+      line-height: 1.8;
       text-transform: uppercase;
-      font-family: 'Oswald', sans-serif;
     }
-    .score-badge {
+    .btn-pixel-action {
       display: inline-block;
-      background: #181818;
-      border: 1px solid #FFC800;
-      color: #FFC800;
-      padding: 4px 14px;
       font-family: 'Oswald', sans-serif;
       font-size: 0.95rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.8rem;
-    }
-    .btn-action-404 {
-      display: inline-block;
-      padding: 12px 28px;
-      font-family: 'Oswald', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
+      text-transform: uppercase;
       letter-spacing: 0.08em;
-      text-transform: uppercase;
+      padding: 12px 24px;
       text-decoration: none;
-      transition: all 0.25s ease;
-      margin: 0.4rem;
+      margin: 6px;
+      border: 2px solid transparent;
+      transition: all 0.2s;
     }
-    .btn-action-primary {
+    .btn-pixel-gold {
       background: #FFC800;
       color: #111111;
-      border: 2px solid #FFC800;
+      border-color: #FFC800;
     }
-    .btn-action-primary:hover {
+    .btn-pixel-gold:hover {
       background: #e6b400;
       border-color: #e6b400;
     }
-    .btn-action-outline {
+    .btn-pixel-dark {
       background: transparent;
       color: #ffffff;
-      border: 2px solid #444444;
+      border-color: #444444;
     }
-    .btn-action-outline:hover {
+    .btn-pixel-dark:hover {
       border-color: #FFC800;
       color: #FFC800;
+    }
+    @media (max-width: 600px) {
+      #dinoCanvas {
+        height: 180px;
+      }
+      .retro-score-bar {
+        font-size: 0.6rem;
+      }
+      .retro-instructions {
+        font-size: 0.55rem;
+      }
     }
   </style>
 </head>
@@ -120,35 +138,45 @@
   </div>
 </header>
 
-<!-- ZONE 404 PRINCIPALE -->
-<main class="page-404-hero">
-  <div style="max-width:800px; width:100%; margin:0 auto; z-index:2;">
+<!-- ZONE 404 PIXEL ART -->
+<main class="retro-404-container">
+  <div style="max-width:760px; width:100%; margin:0 auto;">
     
-    <div class="score-badge">
-      Planches brisées : <span id="boardCounter">0</span> &nbsp;|&nbsp; Kiai !
+    <div style="font-family:'Press Start 2P', monospace; font-size:1.1rem; color:#888888; margin-bottom:0.4rem; letter-spacing:0.05em;">
+      ERROR 404
     </div>
 
-    <h1 style="font-family:'Oswald',sans-serif; font-size:clamp(2.4rem, 6vw, 4.2rem); font-weight:700; color:#FFC800; letter-spacing:0.04em; text-transform:uppercase; margin:0 0 0.4rem; line-height:1;">
-      404 — HORS DU TATAMI
+    <h1 style="font-family:'Oswald', sans-serif; font-size:clamp(1.8rem, 4.5vw, 3rem); font-weight:700; color:#FFC800; letter-spacing:0.04em; text-transform:uppercase; margin:0 0 0.5rem;">
+      PAGE INTROUVABLE SUR LE TATAMI
     </h1>
-    
-    <p style="font-family:'Roboto',sans-serif; font-size:1.05rem; color:#cccccc; max-width:600px; margin:0 auto 1.2rem; line-height:1.6;">
-      Cette page s'est égarée dans un kata inconnu ou a été tranchée net par un coup de coude retourné !
+
+    <p style="font-family:'Roboto', sans-serif; font-size:0.95rem; color:#cccccc; margin:0 auto 1rem; max-width:580px; line-height:1.5;">
+      Cette page s'est volatilisée. En attendant, brisez les planches comme dans le jeu du dino !
     </p>
 
-    <!-- ANIMATION CANVAS DU KARATÉKA -->
-    <div class="canvas-container">
-      <canvas id="karateCanvas" width="720" height="340"></canvas>
-    </div>
-    <div class="game-hint">
-      Cliquez ou tapez sur l'écran (ou appuyez sur Espace) pour frapper les planches !
+    <!-- ÉCRAN ARCADE STYLE CHROME DINO -->
+    <div class="retro-arcade-box">
+      <div class="retro-score-bar">
+        <span>AMB-KARATE</span>
+        <div>
+          <span>HI <span id="hiScoreText">00000</span></span>&nbsp;&nbsp;
+          <span style="color:#222222;" id="currentScoreText">00000</span>
+        </div>
+      </div>
+      
+      <!-- Canvas virtuel basse résolution (300x120) agrandi en pixelated -->
+      <canvas id="dinoCanvas" width="300" height="120"></canvas>
     </div>
 
-    <!-- BOUTONS DE REDIRECTION -->
-    <div style="margin-top:2rem;">
-      <a href="accueil1.html" class="btn-action-404 btn-action-primary">Retour à l'Accueil</a>
-      <a href="espace-membres.html" class="btn-action-404 btn-action-outline">Espace Membres</a>
-      <a href="accueil1.html#contact" class="btn-action-404 btn-action-outline">Contacter le Club</a>
+    <div class="retro-instructions">
+      [ ESPACE ] ou [ CLIC / TACTILE ] pour frapper et briser les planches !
+    </div>
+
+    <!-- BOUTONS DE NAVIGATION -->
+    <div style="margin-top:1.8rem;">
+      <a href="accueil1.html" class="btn-pixel-action btn-pixel-gold">Retourner à l'Accueil</a>
+      <a href="espace-membres.html" class="btn-pixel-action btn-pixel-dark">Espace Membres</a>
+      <a href="accueil1.html#contact" class="btn-pixel-action btn-pixel-dark">Nous Contacter</a>
     </div>
 
   </div>
@@ -206,480 +234,464 @@
 <script src="js/main.js"></script>
 <script>
 // ====================================================================
-// ANIMATION DU KARATÉKA ET PLANCHES DE BOIS
+// MINI-JEU RETRO PIXEL ART "KARATEKA DINO RUNNER" (MONOCHROME)
 // ====================================================================
 (function() {
-  var canvas = document.getElementById('karateCanvas');
+  var canvas = document.getElementById('dinoCanvas');
   var ctx = canvas.getContext('2d');
-  var counterEl = document.getElementById('boardCounter');
+  ctx.imageSmoothingEnabled = false;
+
+  var currentScoreEl = document.getElementById('currentScoreText');
+  var hiScoreEl = document.getElementById('hiScoreText');
+
+  var W = 300;
+  var H = 120;
+  var GROUND_Y = 100;
+
+  var gameState = 'PLAYING'; // 'PLAYING', 'GAMEOVER'
   var score = 0;
+  var hiScore = parseInt(localStorage.getItem('amb_karate_hi') || '0', 10);
+  updateScoreDisplays();
 
-  var W = 720;
-  var H = 340;
+  // Sol défilant (style Chrome Dino)
+  var groundOffset = 0;
+  var speed = 3.2;
 
-  // État du Karatéka au centre
-  var karateka = {
-    x: W / 2,
-    y: H - 50,
-    strikeTimer: 0,
-    strikeDir: 1, // 1 = droite, -1 = gauche
-    strikeType: 0 // 0 = Shuto Uchi (tranchant), 1 = Gyaku Tsuki (poing direct)
-  };
-
-  // Planches en approche
-  var boards = [];
-  var particles = [];
-  var flashes = [];
-  var lastSpawnTime = 0;
-  var spawnInterval = 1200; // millisecondes
-
-  function spawnBoard() {
-    var fromLeft = Math.random() < 0.5;
-    var speed = 2.2 + Math.random() * 1.5;
-    boards.push({
-      x: fromLeft ? -40 : W + 40,
-      y: H - 120 - Math.random() * 40,
-      width: 20,
-      height: 60,
-      vx: fromLeft ? speed : -speed,
-      vy: (Math.random() - 0.5) * 0.4,
-      rotation: (Math.random() - 0.5) * 0.2,
-      broken: false,
-      fromLeft: fromLeft
+  // Lignes / cailloux du sol pixelisés
+  var groundBumps = [];
+  for (var i = 0; i < 40; i++) {
+    groundBumps.push({
+      x: Math.random() * W,
+      y: GROUND_Y + 4 + Math.random() * 12,
+      w: Math.random() < 0.6 ? 2 : 4
     });
   }
 
-  function strike(direction) {
-    karateka.strikeTimer = 16; // durée de l'impact en frames
-    karateka.strikeDir = direction !== undefined ? direction : (Math.random() < 0.5 ? 1 : -1);
-    karateka.strikeType = Math.random() < 0.5 ? 0 : 1;
+  // Nuages rétro pixel
+  var clouds = [
+    { x: 50, y: 22 },
+    { x: 180, y: 35 },
+    { x: 280, y: 18 }
+  ];
 
-    // Vérifier collision avec planches proches du centre
-    var hitZoneX = karateka.x + (karateka.strikeDir * 60);
+  // ==========================================
+  // SPRITES PIXEL ART (Matrices 1/0)
+  // ==========================================
+  // Palette monochrome : Noir/gris sombre '#535353' / '#222222' sur fond '#f7f7f7'
+  var COLOR_DARK = '#535353';
+  var COLOR_BLACK = '#222222';
+  var COLOR_LIGHT = '#999999';
+
+  // Karatéka en garde de course (16 x 24 pixels)
+  var SPRITE_IDLE_1 = [
+    "....XXXXXXXX....",
+    "...XXXXXXXXXX...",
+    "...XX..XX..XX...",
+    "...XXXXXXXXXX...",
+    "....XXXXXXXX....",
+    "....XX....XX....",
+    "...XXXXXXXXXX...",
+    "..XXXXXXXXXXXX..",
+    ".XXXXXXXXXXXXXX.",
+    ".XXXX.XXXX.XXXX.",
+    ".XXXX.XXXX.XXXX.",
+    "..XXXXXXXXXXXX..",
+    "...XXXXXXXXXX...",
+    "....XXXXXXXX....",
+    "....XXXXXXXX....",
+    "...XX.XXXX.XX...",
+    "..XXX.XXXX.XXX..",
+    "..XX..XXXX..XX..",
+    "......XXXX......",
+    "......XXXX......",
+    ".....XX..XX.....",
+    "....XXX..XXX....",
+    "....XX....XX....",
+    "...XXX....XXX..."
+  ];
+
+  var SPRITE_IDLE_2 = [
+    "....XXXXXXXX....",
+    "...XXXXXXXXXX...",
+    "...XX..XX..XX...",
+    "...XXXXXXXXXX...",
+    "....XXXXXXXX....",
+    "....XX....XX....",
+    "...XXXXXXXXXX...",
+    "..XXXXXXXXXXXX..",
+    ".XXXXXXXXXXXXXX.",
+    ".XXXX.XXXX.XXXX.",
+    ".XXXX.XXXX.XXXX.",
+    "..XXXXXXXXXXXX..",
+    "...XXXXXXXXXX...",
+    "....XXXXXXXX....",
+    "....XXXXXXXX....",
+    "...XXXXXXXXXX...",
+    "..XXX..XX..XXX..",
+    "..XX...XX...XX..",
+    "......XXXX......",
+    ".....XX..XX.....",
+    "....XXX..XXX....",
+    "....XX....XX....",
+    "...XXX....XXX...",
+    "..XXXX....XXXX.."
+  ];
+
+  // Karatéka qui frappe (Gyaku Tsuki / Shuto Uchi étendu vers la droite)
+  var SPRITE_PUNCH = [
+    "....XXXXXXXX............",
+    "...XXXXXXXXXX...........",
+    "...XX..XX..XX...........",
+    "...XXXXXXXXXX...........",
+    "....XXXXXXXX............",
+    "....XX....XX............",
+    "...XXXXXXXXXX...........",
+    "..XXXXXXXXXXXX..........",
+    ".XXXXXXXXXXXXXX.........",
+    ".XXXX.XXXXXXXXXXXXXXX...",
+    ".XXXX.XXXXXXXXXXXXXXXX..",
+    "..XXXXXXXXXXXXXXXXXXXX..",
+    "...XXXXXXXXXX.XXXXXXX...",
+    "....XXXXXXXX............",
+    "....XXXXXXXX............",
+    "...XX.XXXX..............",
+    "..XXX.XXXX..............",
+    "..XX..XXXX..............",
+    "......XXXX..............",
+    "......XXXX..............",
+    ".....XX..XX.............",
+    "....XXX...XXX...........",
+    "....XX.....XX...........",
+    "...XXX.....XXX.........."
+  ];
+
+  // Karatéka K.O. (Game Over)
+  var SPRITE_KO = [
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    "........................",
+    ".....XXXXXXXX...........",
+    "...XXXXXXXXXXXX.........",
+    "..XX.XX.XX.XXXXX........",
+    "..XXXXXXXXXXXXXXXX......",
+    ".XXXXXXXXXXXXXXXXXX.....",
+    "XXXXXXXXXXXXXXXXXXXXX...",
+    ".XXXXXXXXXXXXXXXXXXXXX..",
+    "..XXXXXXXX..XXXXXXXXX...",
+    "...XXXXXX....XXXXXX....."
+  ];
+
+  // Planche de bois (8 x 22 pixels)
+  var SPRITE_BOARD = [
+    "XXXXXXXX",
+    "X.X.X..X",
+    "X.X.X..X",
+    "X...X..X",
+    "X...X..X",
+    "X.X.X..X",
+    "X.X.X..X",
+    "X...X..X",
+    "X...X..X",
+    "X.X.X..X",
+    "XXXXXXXX",
+    "XXXXXXXX",
+    "X...X..X",
+    "X...X..X",
+    "X.X.X..X",
+    "X.X.X..X",
+    "X...X..X",
+    "X...X..X",
+    "X.X.X..X",
+    "X.X.X..X",
+    "X.X.X..X",
+    "XXXXXXXX"
+  ];
+
+  function drawMatrix(c, matrix, startX, startY, pixelSize, color) {
+    c.fillStyle = color || COLOR_DARK;
+    for (var r = 0; r < matrix.length; r++) {
+      var row = matrix[r];
+      for (var col = 0; col < row.length; col++) {
+        if (row[col] === 'X') {
+          c.fillRect(startX + (col * pixelSize), startY + (r * pixelSize), pixelSize, pixelSize);
+        }
+      }
+    }
+  }
+
+  // Joueur
+  var player = {
+    x: 35,
+    y: GROUND_Y - 24,
+    strikeTimer: 0,
+    animFrame: 0,
+    animTick: 0
+  };
+
+  // Planches d'obstacles
+  var boards = [];
+  var splinters = [];
+  var nextSpawn = 50;
+
+  function spawnObstacle() {
+    boards.push({
+      x: W + 10,
+      y: GROUND_Y - 22,
+      w: 8,
+      h: 22,
+      broken: false
+    });
+  }
+
+  function strike() {
+    if (gameState === 'GAMEOVER') {
+      resetGame();
+      return;
+    }
+
+    player.strikeTimer = 10; // frames en posture de frappe
+
+    // Vérifier collision d'attaque avec la planche la plus proche
     for (var i = 0; i < boards.length; i++) {
       var b = boards[i];
-      if (!b.broken && Math.abs(b.x - hitZoneX) < 65) {
-        breakBoard(b);
+      if (!b.broken) {
+        var dist = b.x - (player.x + 16);
+        // Zone d'impact de frappe : entre 0 et 32 pixels devant le karatéka
+        if (dist >= -4 && dist <= 30) {
+          breakBoard(b);
+          break;
+        }
       }
     }
   }
 
   function breakBoard(b) {
     b.broken = true;
-    score++;
-    if (counterEl) counterEl.textContent = score;
+    score += 100;
+    updateScoreDisplays();
 
-    // Éclat d'impact
-    flashes.push({
-      x: b.x,
-      y: b.y + b.height / 2,
-      radius: 35,
-      alpha: 1
-    });
-
-    // 2 Moitiés de planche qui s'écartent
-    var halfH = b.height / 2;
-    var dir = b.fromLeft ? 1 : -1;
-
-    particles.push({
-      type: 'board-half',
-      x: b.x,
-      y: b.y,
-      w: b.width,
-      h: halfH,
-      vx: (b.vx * 0.5) + (Math.random() * 2 - 1),
-      vy: -3.5 - Math.random() * 2,
-      rot: 0,
-      vrot: 0.15 * dir,
-      alpha: 1
-    });
-
-    particles.push({
-      type: 'board-half',
-      x: b.x,
-      y: b.y + halfH,
-      w: b.width,
-      h: halfH,
-      vx: (b.vx * 0.4) - (Math.random() * 2 - 1),
-      vy: 1.5 + Math.random() * 2,
-      rot: 0,
-      vrot: -0.15 * dir,
-      alpha: 1
-    });
-
-    // Échardes de bois
+    // Générer éclats de pixels (échardes de bois monochrome)
     for (var k = 0; k < 12; k++) {
-      particles.push({
-        type: 'splinter',
-        x: b.x + (Math.random() * 10 - 5),
-        y: b.y + halfH + (Math.random() * 10 - 5),
-        w: 3 + Math.random() * 4,
-        h: 2 + Math.random() * 3,
-        vx: (Math.random() - 0.5) * 8 + (dir * 2),
-        vy: (Math.random() - 0.5) * 7 - 2,
-        rot: Math.random() * 6.28,
-        vrot: (Math.random() - 0.5) * 0.4,
-        color: Math.random() < 0.5 ? '#d49b56' : (Math.random() < 0.5 ? '#9c6630' : '#FFC800'),
+      splinters.push({
+        x: b.x + Math.random() * 6,
+        y: b.y + Math.random() * 20,
+        vx: (Math.random() - 0.2) * 5 + 1.5,
+        vy: -Math.random() * 4 - 1,
+        size: Math.random() < 0.5 ? 2 : 3,
         alpha: 1
       });
     }
   }
 
-  // Clic ou touche pour frapper
-  canvas.addEventListener('click', function(e) {
-    var rect = canvas.getBoundingClientRect();
-    var clickX = (e.clientX - rect.left) * (W / rect.width);
-    var dir = clickX > karateka.x ? 1 : -1;
-    strike(dir);
-  });
+  function gameOver() {
+    gameState = 'GAMEOVER';
+    if (score > hiScore) {
+      hiScore = score;
+      localStorage.setItem('amb_karate_hi', hiScore.toString());
+    }
+    updateScoreDisplays();
+  }
 
+  function resetGame() {
+    score = 0;
+    speed = 3.2;
+    boards = [];
+    splinters = [];
+    nextSpawn = 40;
+    player.strikeTimer = 0;
+    gameState = 'PLAYING';
+    updateScoreDisplays();
+  }
+
+  function updateScoreDisplays() {
+    var sStr = score.toString();
+    while (sStr.length < 5) sStr = '0' + sStr;
+    currentScoreEl.textContent = sStr;
+
+    var hStr = hiScore.toString();
+    while (hStr.length < 5) hStr = '0' + hStr;
+    hiScoreEl.textContent = hStr;
+  }
+
+  // Événements utilisateur
   window.addEventListener('keydown', function(e) {
-    if (e.code === 'Space' || e.code === 'ArrowRight') {
-      strike(1);
-    } else if (e.code === 'ArrowLeft') {
-      strike(-1);
+    if (e.code === 'Space' || e.code === 'ArrowUp' || e.code === 'ArrowRight') {
+      e.preventDefault();
+      strike();
     }
   });
+
+  canvas.addEventListener('click', function(e) {
+    e.preventDefault();
+    strike();
+  });
+
+  canvas.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    strike();
+  }, { passive: false });
 
   // Boucle de rendu
-  var lastTime = performance.now();
-
-  function animate(now) {
-    var dt = now - lastTime;
-    lastTime = now;
-
-    // Génération automatique des planches
-    if (now - lastSpawnTime > spawnInterval) {
-      spawnBoard();
-      lastSpawnTime = now;
-      spawnInterval = 800 + Math.random() * 700;
-    }
-
-    // Auto-frappe IA si le joueur ne clique pas (mode spectacle autonome)
-    for (var i = 0; i < boards.length; i++) {
-      var b = boards[i];
-      if (!b.broken) {
-        var dist = Math.abs(b.x - karateka.x);
-        if (dist < 65 && karateka.strikeTimer <= 0) {
-          strike(b.x > karateka.x ? 1 : -1);
-          break;
-        }
-      }
-    }
-
-    if (karateka.strikeTimer > 0) {
-      karateka.strikeTimer--;
-    }
-
-    // Effacement canvas
+  function gameLoop() {
     ctx.clearRect(0, 0, W, H);
 
-    // Dessin du Tatami / Sol
-    ctx.fillStyle = '#161616';
-    ctx.fillRect(0, H - 40, W, 40);
-    ctx.strokeStyle = '#FFC800';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(0, H - 40);
-    ctx.lineTo(W, H - 40);
-    ctx.stroke();
-
-    // Lignes de tatami stylisées
-    ctx.strokeStyle = '#242424';
-    ctx.lineWidth = 1;
-    for (var lx = 60; lx < W; lx += 80) {
-      ctx.beginPath();
-      ctx.moveTo(lx, H - 40);
-      ctx.lineTo(lx, H);
-      ctx.stroke();
+    // 1. DESSINER LES NUAGES PIXEL
+    ctx.fillStyle = '#d8d8d8';
+    for (var cIdx = 0; cIdx < clouds.length; cIdx++) {
+      var cl = clouds[cIdx];
+      if (gameState === 'PLAYING') {
+        cl.x -= 0.3;
+        if (cl.x < -40) cl.x = W + 20;
+      }
+      // Dessin nuage géométrique
+      ctx.fillRect(cl.x, cl.y, 24, 6);
+      ctx.fillRect(cl.x + 6, cl.y - 4, 12, 4);
     }
 
-    // Dessin du Karatéka (style épuré martial noir & or)
-    drawKarateka(ctx, karateka);
+    // 2. DESSINER LE SOL RETRO DINO
+    ctx.fillStyle = COLOR_DARK;
+    ctx.fillRect(0, GROUND_Y, W, 1);
 
-    // Mise à jour et dessin des planches de bois en vol
-    for (var j = boards.length - 1; j >= 0; j--) {
-      var bd = boards[j];
-      bd.x += bd.vx;
-      bd.y += bd.vy;
+    // Cailloux / stries du sol
+    for (var bIdx = 0; bIdx < groundBumps.length; bIdx++) {
+      var bump = groundBumps[bIdx];
+      if (gameState === 'PLAYING') {
+        bump.x -= speed;
+        if (bump.x < -10) bump.x = W + Math.random() * 20;
+      }
+      ctx.fillRect(bump.x, bump.y, bump.w, 1);
+    }
 
-      if (!bd.broken) {
-        drawBoard(ctx, bd);
-      } else {
-        // Supprimer la planche une fois brisée
-        boards.splice(j, 1);
+    // 3. GÉRER LE JOUEUR
+    if (gameState === 'PLAYING') {
+      player.animTick++;
+      if (player.animTick % 6 === 0) {
+        player.animFrame = (player.animFrame === 0) ? 1 : 0;
       }
 
-      // Supprimer si sortie de l'écran sans toucher
-      if (bd.x < -60 || bd.x > W + 60) {
-        boards.splice(j, 1);
+      if (player.strikeTimer > 0) {
+        player.strikeTimer--;
+      }
+
+      // Progression du score continue comme le dino
+      score += 1;
+      if (score % 10 === 0) {
+        updateScoreDisplays();
+      }
+      // Accélération progressive
+      if (score % 400 === 0 && speed < 6.5) {
+        speed += 0.25;
+      }
+
+      // Génération des planches
+      nextSpawn--;
+      if (nextSpawn <= 0) {
+        spawnObstacle();
+        nextSpawn = Math.floor(45 + Math.random() * 55 - (speed * 2));
       }
     }
 
-    // Dessin et physique des particules de bois
-    for (var pIdx = particles.length - 1; pIdx >= 0; pIdx--) {
-      var p = particles[pIdx];
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vy += 0.25; // gravité
-      p.rot += p.vrot;
-      p.alpha -= 0.015;
-
-      if (p.alpha <= 0 || p.y > H + 50) {
-        particles.splice(pIdx, 1);
-        continue;
-      }
-
-      ctx.save();
-      ctx.globalAlpha = Math.max(0, p.alpha);
-      ctx.translate(p.x, p.y);
-      ctx.rotate(p.rot);
-
-      if (p.type === 'board-half') {
-        ctx.fillStyle = '#b87c38';
-        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
-        ctx.strokeStyle = '#6e4418';
-        ctx.lineWidth = 1;
-        ctx.strokeRect(-p.w / 2, -p.h / 2, p.w, p.h);
-        // Rainure brisée
-        ctx.fillStyle = '#f0c896';
-        ctx.fillRect(-p.w / 2, p.h / 2 - 3, p.w, 3);
-      } else {
-        ctx.fillStyle = p.color || '#d49b56';
-        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
-      }
-      ctx.restore();
-    }
-
-    // Dessin des étincelles d'impact (Kiai flash)
-    for (var fIdx = flashes.length - 1; fIdx >= 0; fIdx--) {
-      var fl = flashes[fIdx];
-      fl.radius += 2.5;
-      fl.alpha -= 0.08;
-      if (fl.alpha <= 0) {
-        flashes.splice(fIdx, 1);
-        continue;
-      }
-      ctx.save();
-      ctx.globalAlpha = fl.alpha;
-      ctx.strokeStyle = '#FFC800';
-      ctx.lineWidth = 3;
-      ctx.beginPath();
-      ctx.arc(fl.x, fl.y, fl.radius, 0, Math.PI * 2);
-      ctx.stroke();
-
-      // Texte "KIAI !"
-      ctx.font = 'bold 16px "Oswald", sans-serif';
-      ctx.fillStyle = '#ffffff';
-      ctx.textAlign = 'center';
-      ctx.fillText('KIAI !', fl.x, fl.y - fl.radius - 4);
-      ctx.restore();
-    }
-
-    requestAnimationFrame(animate);
-  }
-
-  // Fonction dessin de planche entière
-  function drawBoard(c, b) {
-    c.save();
-    c.translate(b.x, b.y + b.height / 2);
-    c.rotate(b.rotation);
-
-    // Fond planche (bois châtain)
-    c.fillStyle = '#c58b45';
-    c.fillRect(-b.width / 2, -b.height / 2, b.width, b.height);
-
-    // Bordures et nervures
-    c.strokeStyle = '#784617';
-    c.lineWidth = 1.5;
-    c.strokeRect(-b.width / 2, -b.height / 2, b.width, b.height);
-
-    // Veines du bois
-    c.strokeStyle = 'rgba(70, 35, 10, 0.4)';
-    c.lineWidth = 1;
-    c.beginPath();
-    c.moveTo(-b.width / 4, -b.height / 2);
-    c.lineTo(-b.width / 4, b.height / 2);
-    c.moveTo(b.width / 4, -b.height / 2);
-    c.lineTo(b.width / 4, b.height / 2);
-    c.stroke();
-
-    // Marque centrale fragile
-    c.strokeStyle = 'rgba(255, 200, 0, 0.6)';
-    c.beginPath();
-    c.moveTo(-b.width / 2, 0);
-    c.lineTo(b.width / 2, 0);
-    c.stroke();
-
-    c.restore();
-  }
-
-  // Fonction dessin du Karatéka (style silhouette athlétique blanche & or avec ceinture noire)
-  function drawKarateka(c, k) {
-    c.save();
-    c.translate(k.x, k.y);
-
-    var isStriking = k.strikeTimer > 0;
-    var dir = k.strikeDir;
-
-    // Ombre au sol
-    c.fillStyle = 'rgba(0, 0, 0, 0.5)';
-    c.beginPath();
-    c.ellipse(0, 5, 45, 10, 0, 0, Math.PI * 2);
-    c.fill();
-
-    // JAMBES / POSTURE (Zenkutsu Dachi ou Kiba Dachi)
-    c.fillStyle = '#f0f0f0';
-    c.strokeStyle = '#cccccc';
-    c.lineWidth = 2;
-
-    // Jambe gauche
-    c.beginPath();
-    c.moveTo(-15, -45);
-    c.lineTo(-32, -5);
-    c.lineTo(-42, 0);
-    c.lineTo(-35, 0);
-    c.lineTo(-10, -40);
-    c.closePath();
-    c.fill();
-    c.stroke();
-
-    // Jambe droite
-    c.beginPath();
-    c.moveTo(15, -45);
-    c.lineTo(32, -5);
-    c.lineTo(42, 0);
-    c.lineTo(35, 0);
-    c.lineTo(10, -40);
-    c.closePath();
-    c.fill();
-    c.stroke();
-
-    // BUSTE (Karategi Blanc)
-    c.beginPath();
-    c.moveTo(-22, -95);
-    c.lineTo(22, -95);
-    c.lineTo(18, -45);
-    c.lineTo(-18, -45);
-    c.closePath();
-    c.fillStyle = '#f8f8f8';
-    c.fill();
-    c.strokeStyle = '#cccccc';
-    c.stroke();
-
-    // Revers croisé du kimono
-    c.strokeStyle = '#FFC800';
-    c.lineWidth = 2;
-    c.beginPath();
-    c.moveTo(-15, -95);
-    c.lineTo(5, -55);
-    c.stroke();
-    c.beginPath();
-    c.moveTo(15, -95);
-    c.lineTo(-5, -55);
-    c.stroke();
-
-    // CEINTURE NOIRE (Obi)
-    c.fillStyle = '#111111';
-    c.fillRect(-20, -52, 40, 10);
-    // Pans de ceinture qui tombent
-    c.fillRect(-4, -42, 6, 26);
-    c.fillRect(3, -42, 6, 22);
-    // Broderie dorée sur ceinture
-    c.fillStyle = '#FFC800';
-    c.fillRect(-3, -22, 4, 4);
-
-    // BRAS & FRAPPE
-    c.strokeStyle = '#f8f8f8';
-    c.fillStyle = '#f8f8f8';
-    c.lineWidth = 9;
-    c.lineCap = 'round';
-
-    if (isStriking) {
-      // Bras de garde replié
-      c.beginPath();
-      c.moveTo(-dir * 18, -85);
-      c.lineTo(-dir * 25, -60);
-      c.stroke();
-
-      // Poing de garde
-      c.fillStyle = '#e8a977';
-      c.beginPath();
-      c.arc(-dir * 25, -60, 6, 0, Math.PI * 2);
-      c.fill();
-
-      // BRAS D'ATTAQUE (Déployé dans la direction d'impact)
-      c.strokeStyle = '#ffffff';
-      c.beginPath();
-      c.moveTo(dir * 15, -85);
-      var strikeTargetX = dir * 65;
-      var strikeTargetY = -85;
-      c.lineTo(strikeTargetX, strikeTargetY);
-      c.stroke();
-
-      // MAIN DE FRAPPE (Poing ou Tranchant Shuto)
-      c.fillStyle = '#e8a977';
-      if (k.strikeType === 0) {
-        // Tranchant de main (Shuto)
-        c.save();
-        c.translate(strikeTargetX, strikeTargetY);
-        c.rotate(dir * 0.3);
-        c.fillRect(-2, -8, 14 * dir, 6);
-        c.restore();
-      } else {
-        // Poing fermé (Tsuki)
-        c.beginPath();
-        c.arc(strikeTargetX + (dir * 4), strikeTargetY, 7, 0, Math.PI * 2);
-        c.fill();
-      }
-
+    // Dessin du Karatéka
+    if (gameState === 'GAMEOVER') {
+      drawMatrix(ctx, SPRITE_KO, player.x, GROUND_Y - 24, 1, COLOR_DARK);
+    } else if (player.strikeTimer > 0) {
+      drawMatrix(ctx, SPRITE_PUNCH, player.x, GROUND_Y - 24, 1, COLOR_BLACK);
+      
+      // Texte pixel "KIAI!" au-dessus
+      ctx.font = '8px "Press Start 2P", monospace';
+      ctx.fillStyle = COLOR_BLACK;
+      ctx.fillText('KIAI!', player.x + 6, GROUND_Y - 28);
     } else {
-      // POSITION DE GARDE EN ATTENTE (Kamae)
-      c.beginPath();
-      c.moveTo(-18, -85);
-      c.lineTo(-30, -75);
-      c.lineTo(-24, -60);
-      c.stroke();
-
-      c.beginPath();
-      c.moveTo(18, -85);
-      c.lineTo(30, -75);
-      c.lineTo(24, -60);
-      c.stroke();
-
-      // Mains de garde
-      c.fillStyle = '#e8a977';
-      c.beginPath();
-      c.arc(-24, -60, 6, 0, Math.PI * 2);
-      c.arc(24, -60, 6, 0, Math.PI * 2);
-      c.fill();
+      var spr = (player.animFrame === 0) ? SPRITE_IDLE_1 : SPRITE_IDLE_2;
+      drawMatrix(ctx, spr, player.x, GROUND_Y - 24, 1, COLOR_DARK);
     }
 
-    // COU & TÊTE
-    c.fillStyle = '#e8a977';
-    c.fillRect(-6, -104, 12, 10);
+    // 4. GÉRER LES PLANCHES DE BOIS
+    for (var i = boards.length - 1; i >= 0; i--) {
+      var ob = boards[i];
+      if (gameState === 'PLAYING') {
+        ob.x -= speed;
+      }
 
-    // Visage / Tête
-    c.beginPath();
-    c.arc(0, -112, 14, 0, Math.PI * 2);
-    c.fill();
+      if (!ob.broken) {
+        drawMatrix(ctx, SPRITE_BOARD, ob.x, ob.y, 1, COLOR_BLACK);
 
-    // Cheveux / Bandeau martial noir
-    c.fillStyle = '#111111';
-    c.beginPath();
-    c.arc(0, -116, 14, Math.PI, Math.PI * 2);
-    c.fill();
+        // Détection de collision (si le joueur ne frappe pas à temps)
+        if (gameState === 'PLAYING') {
+          var playerHitbox = { x: player.x + 4, y: GROUND_Y - 22, w: 10, h: 22 };
+          if (
+            playerHitbox.x < ob.x + ob.w &&
+            playerHitbox.x + playerHitbox.w > ob.x &&
+            playerHitbox.y < ob.y + ob.h &&
+            playerHitbox.y + playerHitbox.h > ob.y
+          ) {
+            gameOver();
+          }
+        }
+      }
 
-    // Ruban du bandeau martial qui flotte
-    c.fillStyle = '#FFC800';
-    c.fillRect(-14, -116, 28, 4);
-    c.fillRect(-18 - (dir * 3), -118, 6, 14);
+      if (ob.x < -30) {
+        boards.splice(i, 1);
+      }
+    }
 
-    c.restore();
+    // 5. GÉRER LES ÉCLATS DE BOIS BRISÉ
+    for (var sIdx = splinters.length - 1; sIdx >= 0; sIdx--) {
+      var sp = splinters[sIdx];
+      sp.x += sp.vx;
+      sp.y += sp.vy;
+      sp.vy += 0.25; // gravité pixel
+      sp.alpha -= 0.03;
+
+      if (sp.alpha <= 0 || sp.y > GROUND_Y + 15) {
+        splinters.splice(sIdx, 1);
+        continue;
+      }
+
+      ctx.fillStyle = COLOR_DARK;
+      ctx.fillRect(Math.round(sp.x), Math.round(sp.y), sp.size, sp.size);
+    }
+
+    // 6. ÉCRAN GAME OVER (Style Chrome Dino)
+    if (gameState === 'GAMEOVER') {
+      ctx.font = '10px "Press Start 2P", monospace';
+      ctx.fillStyle = COLOR_BLACK;
+      ctx.textAlign = 'center';
+      ctx.fillText('G A M E   O V E R', W / 2, 45);
+
+      // Icône Restart pixelisée (flèche circulaire)
+      var rx = W / 2 - 8;
+      var ry = 58;
+      ctx.fillRect(rx + 4, ry, 8, 2);
+      ctx.fillRect(rx + 12, ry + 2, 2, 6);
+      ctx.fillRect(rx + 4, ry + 8, 8, 2);
+      ctx.fillRect(rx + 2, ry + 4, 2, 4);
+      // flèche
+      ctx.fillRect(rx + 2, ry, 2, 4);
+      ctx.fillRect(rx, ry + 2, 2, 2);
+
+      ctx.font = '6px "Press Start 2P", monospace';
+      ctx.fillStyle = COLOR_LIGHT;
+      ctx.fillText('[ ESPACE ] POUR REJOUER', W / 2, 80);
+      ctx.textAlign = 'left';
+    }
+
+    requestAnimationFrame(gameLoop);
   }
 
-  // Démarrer l'animation
-  requestAnimationFrame(animate);
+  requestAnimationFrame(gameLoop);
 
 })();
 </script>
