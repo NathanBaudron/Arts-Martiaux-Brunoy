@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espace Membres & Documents Administratifs | Arts Martiaux de Brunoy</title>
-  <meta name="description" content="Espace officiel réservé aux adhérents de l'Association Arts Martiaux de Brunoy : inscriptions, documents Cerfa, tarifs, règlements et attestations.">
+  <title>Espace Membres & Documents | Arts Martiaux de Brunoy</title>
+  <meta name="description" content="Espace officiel réservé aux adhérents de l'Association Arts Martiaux de Brunoy : inscriptions, documents, tarifs et portail adhérent.">
   <link rel="icon" type="image/png" href="images/logo/logo.png">
   <link rel="apple-touch-icon" href="images/logo/logo.png">
   <link rel="stylesheet" href="styles/main.css">
@@ -18,9 +18,7 @@
       <img src="images/logo/logo.png" alt="Arts Martiaux de Brunoy" class="header-logo-img">
       <span class="site-logo">Arts Martiaux de Brunoy</span>
     </a>
-    
     <button class="mobile-toggle" id="mobile-toggle" aria-label="Ouvrir le menu">&#9776;</button>
-    
     <nav class="site-nav" id="main-nav">
       <a href="accueil1.html" class="nav-link">Accueil</a>
       <a href="histoire.html" class="nav-link">Histoire</a>
@@ -39,492 +37,274 @@
   </div>
 </header>
 
-<!-- HERO ESPACE MEMBRES (STYLE ADMINISTRATIF SOBRE & NOBLE) -->
-<section style="background:#0a0a0a; color:#ffffff; padding:55px 24px 40px; border-bottom:3px solid #FFC800;">
-  <div class="section-inner" style="max-width:920px; text-align:center;">
-    <div style="display:inline-block; font-family:'Oswald',sans-serif; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:#111111; background:#FFC800; padding:4px 12px; margin-bottom:1rem; font-weight:700;">
-      Saison 2026 / 2027 — Espace Adhérents Officiel
-    </div>
-    <h1 style="font-family:'Oswald',sans-serif; font-size:clamp(2.2rem, 5vw, 3.6rem); font-weight:700; color:#ffffff; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:1rem;">
-      ESPACE MEMBRES & DOCUMENTS
-    </h1>
-    <div style="width:80px; height:4px; background:#FFC800; margin:0 auto 1.25rem;"></div>
-    <p style="font-family:'Roboto',sans-serif; font-size:1.08rem; color:#cccccc; line-height:1.75; max-width:800px; margin:0 auto;">
-      Accédez à toutes les pièces administratives indispensables pour votre adhésion, téléchargez vos formulaires Cerfa, consultez les tarifs des cours et gérez votre dossier d'adhérent.
-    </p>
+<!-- HERO COMPACT -->
+<section style="background:#0a0a0a; color:#ffffff; padding:40px 24px 32px; border-bottom:3px solid #FFC800;">
+  <div class="section-inner" style="max-width:800px; text-align:center;">
+    <span style="display:inline-block; font-family:'Oswald',sans-serif; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:#111; background:#FFC800; padding:3px 10px; font-weight:700; margin-bottom:0.75rem;">Saison 2026 / 2027</span>
+    <h1 style="font-family:'Oswald',sans-serif; font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#ffffff; letter-spacing:0.04em; text-transform:uppercase; margin-bottom:0.5rem;">ESPACE MEMBRES</h1>
+    <p style="font-family:'Roboto',sans-serif; font-size:0.95rem; color:#aaaaaa; margin:0;">Documents d'inscription, tarifs et portail adhérent</p>
   </div>
 </section>
 
-<!-- CONTENEUR PRINCIPAL DU PORTAIL ADHÉRENT -->
-<section class="section" style="padding:40px 24px 70px;">
+<!-- CONTENEUR PRINCIPAL -->
+<section class="section" style="padding:30px 24px 60px;">
   <div class="section-inner wide">
     
-    <!-- BARRE D'ONGLETS DU PORTAIL -->
+    <!-- 3 ONGLETS SIMPLES -->
     <div class="member-portal-nav">
-      <button class="member-tab-btn active" onclick="switchTab('docs')" id="btn-tab-docs">1. Documents & Fiches</button>
-      <button class="member-tab-btn" onclick="switchTab('tarifs')" id="btn-tab-tarifs">2. Tarifs & Règlement</button>
-      <button class="member-tab-btn" onclick="switchTab('licence')" id="btn-tab-licence">3. Licence FFK & Médical</button>
-      <button class="member-tab-btn" onclick="switchTab('reglement')" id="btn-tab-reglement">4. Règlement Intérieur</button>
-      <button class="member-tab-btn" onclick="switchTab('compte')" id="btn-tab-compte">5. Portail Adhérent</button>
+      <button class="member-tab-btn active" onclick="switchTab('docs')" id="btn-tab-docs">Documents</button>
+      <button class="member-tab-btn" onclick="switchTab('tarifs')" id="btn-tab-tarifs">Tarifs & Aides</button>
+      <button class="member-tab-btn" onclick="switchTab('compte')" id="btn-tab-compte">Mon Espace</button>
     </div>
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         PANEL 1 : DOCUMENTS ADMINISTRATIFS
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- PANEL 1 : DOCUMENTS — Liste compacte                   -->
+    <!-- ═══════════════════════════════════════════════════════ -->
     <div class="member-panel active" id="panel-docs">
-      <div style="margin-bottom:2rem; background:#ffffff; border-left:4px solid #FFC800; padding:1.25rem 1.5rem; border:1px solid #e0e0e0;">
-        <h3 style="font-family:'Oswald',sans-serif; color:#111111; font-size:1.2rem; text-transform:uppercase; margin-bottom:0.3rem;">
-          Constitution du Dossier d'Inscription 2026/2027
-        </h3>
-        <p style="font-family:'Roboto',sans-serif; color:#555555; font-size:0.92rem; margin:0; line-height:1.6;">
-          Pour valider votre inscription (ou celle de votre enfant), le dossier complet doit comprendre : 
-          <strong>la fiche d'inscription signée</strong>, <strong>l'attestation de santé ou certificat médical</strong>, <strong>l'autorisation parentale (pour les mineurs)</strong> et le <strong>règlement de la cotisation</strong>.
+
+      <!-- Dossier requis -->
+      <div style="background:#fff; border-left:4px solid #FFC800; padding:1rem 1.25rem; border:1px solid #e0e0e0; margin-bottom:1.75rem;">
+        <p style="font-family:'Roboto',sans-serif; color:#444; font-size:0.9rem; margin:0; line-height:1.6;">
+          <strong>Dossier complet :</strong> Fiche d'inscription + Attestation de santé (ou certificat médical) + Autorisation parentale (mineurs) + Règlement de la cotisation.
         </p>
       </div>
 
-      <div class="member-doc-grid">
-        
-        <!-- Doc 1: Fiche d'inscription -->
-        <div class="member-doc-card">
+      <!-- Liste des documents -->
+      <div style="display:flex; flex-direction:column; gap:0.75rem;">
+
+        <div style="display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #e0e0e0; padding:1rem 1.25rem; flex-wrap:wrap; gap:0.75rem;">
           <div>
-            <span class="member-doc-tag required">Obligatoire pour tous</span>
-            <h4 class="member-doc-title">Fiche d'Inscription Officielle AMB</h4>
-            <p class="member-doc-desc">
-              Formulaire d'adhésion officiel de l'Association Arts Martiaux de Brunoy : état civil, choix des disciplines (Karaté enfants/adultes, Tai Chi), contact d'urgence et droit à l'image.
-            </p>
+            <span style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; background:#FFC800; color:#111; padding:2px 6px; margin-bottom:0.3rem;">Obligatoire</span>
+            <h4 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin:0;">Fiche d'Inscription Officielle AMB</h4>
+            <p style="font-size:0.82rem; color:#777; margin:0.15rem 0 0;">État civil, disciplines, contact d'urgence, droit à l'image</p>
           </div>
-          <div class="member-doc-actions">
-            <button class="btn-doc-primary" onclick="openDocModal('inscription')">
-              Ouvrir & Imprimer la Fiche
-            </button>
-          </div>
+          <button class="btn-doc-primary" onclick="openDocModal('inscription')">Ouvrir & Imprimer</button>
         </div>
 
-        <!-- Doc 2: Questionnaire de Santé Cerfa -->
-        <div class="member-doc-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #e0e0e0; padding:1rem 1.25rem; flex-wrap:wrap; gap:0.75rem;">
           <div>
-            <span class="member-doc-tag">Réglementation Fédérale</span>
-            <h4 class="member-doc-title">Questionnaire de Santé (QS-Sport)</h4>
-            <p class="member-doc-desc">
-              Formulaire officiel Cerfa n°15699*01 (Ministère des Sports). Permet d'évaluer si un certificat médical de non-contre-indication est requis pour la présente saison.
-            </p>
+            <h4 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin:0;">Questionnaire de Santé (QS-Sport Cerfa)</h4>
+            <p style="font-size:0.82rem; color:#777; margin:0.15rem 0 0;">Si toutes les réponses sont NON, pas de certificat médical requis</p>
           </div>
-          <div class="member-doc-actions">
-            <button class="btn-doc-primary" onclick="openDocModal('qssport')">
-              Consulter le Questionnaire
-            </button>
-          </div>
+          <button class="btn-doc-primary" onclick="openDocModal('qssport')">Consulter</button>
         </div>
 
-        <!-- Doc 3: Attestation sur l'honneur de santé -->
-        <div class="member-doc-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #e0e0e0; padding:1rem 1.25rem; flex-wrap:wrap; gap:0.75rem;">
           <div>
-            <span class="member-doc-tag required">À joindre si QS-Sport négatif</span>
-            <h4 class="member-doc-title">Attestation sur l'Honneur de Santé</h4>
-            <p class="member-doc-desc">
-              Document officiel par lequel vous attestez avoir répondu par la négative à toutes les rubriques du questionnaire QS-Sport, dispensant ainsi de certificat médical cette saison.
-            </p>
+            <h4 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin:0;">Attestation sur l'Honneur de Santé</h4>
+            <p style="font-size:0.82rem; color:#777; margin:0.15rem 0 0;">À joindre si QS-Sport entièrement négatif (dispense de certificat médical)</p>
           </div>
-          <div class="member-doc-actions">
-            <button class="btn-doc-primary" onclick="openDocModal('attestation-sante')">
-              Ouvrir l'Attestation
-            </button>
-          </div>
+          <button class="btn-doc-primary" onclick="openDocModal('attestation-sante')">Ouvrir</button>
         </div>
 
-        <!-- Doc 4: Autorisation parentale -->
-        <div class="member-doc-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #e0e0e0; padding:1rem 1.25rem; flex-wrap:wrap; gap:0.75rem;">
           <div>
-            <span class="member-doc-tag required">Obligatoire pour mineurs</span>
-            <h4 class="member-doc-title">Autorisation Parentale & Médicale</h4>
-            <p class="member-doc-desc">
-              Autorisation parentale d'adhésion pour les cours enfants (7-12 ans) et ados, autorisation de transport, prise en charge médicale d'urgence et consignes de sortie du dojo.
-            </p>
+            <span style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; background:#FFC800; color:#111; padding:2px 6px; margin-bottom:0.3rem;">Mineurs</span>
+            <h4 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin:0;">Autorisation Parentale & Médicale</h4>
+            <p style="font-size:0.82rem; color:#777; margin:0.15rem 0 0;">Accord parental, urgences médicales, sortie du dojo</p>
           </div>
-          <div class="member-doc-actions">
-            <button class="btn-doc-primary" onclick="openDocModal('autorisation-parentale')">
-              Ouvrir l'Autorisation
-            </button>
-          </div>
+          <button class="btn-doc-primary" onclick="openDocModal('autorisation-parentale')">Ouvrir</button>
         </div>
 
-        <!-- Doc 5: Règlement intérieur -->
-        <div class="member-doc-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #e0e0e0; padding:1rem 1.25rem; flex-wrap:wrap; gap:0.75rem;">
           <div>
-            <span class="member-doc-tag">Charte du Club</span>
-            <h4 class="member-doc-title">Règlement Intérieur & Charte Dojo</h4>
-            <p class="member-doc-desc">
-              Règles de discipline, étiquette martiale (Rei), tenue réglementaire (Gi propre), hygiène des tatamis et sécurité lors des entraînements au Gymnase Pierre de Coubertin.
-            </p>
+            <h4 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin:0;">Attestation de Paiement (CE / Mutuelle)</h4>
+            <p style="font-size:0.82rem; color:#777; margin:0.15rem 0 0;">Justificatif pour remboursement employeur ou mutuelle</p>
           </div>
-          <div class="member-doc-actions">
-            <button class="btn-doc-secondary" onclick="switchTab('reglement')">
-              Consulter le Règlement
-            </button>
-          </div>
-        </div>
-
-        <!-- Doc 6: Attestation CE / Facture acquittée -->
-        <div class="member-doc-card">
-          <div>
-            <span class="member-doc-tag">Remboursement CE / Mutuelle</span>
-            <h4 class="member-doc-title">Attestation de Paiement & Facture</h4>
-            <p class="member-doc-desc">
-              Justificatif de paiement acquitté avec le tampon officiel de l'association, destiné au remboursement de votre cotisation par votre Comité d'Entreprise ou mutuelle.
-            </p>
-          </div>
-          <div class="member-doc-actions">
-            <button class="btn-doc-primary" onclick="openDocModal('attestation-ce')">
-              Générer mon Attestation
-            </button>
-          </div>
+          <button class="btn-doc-primary" onclick="openDocModal('attestation-ce')">Générer</button>
         </div>
 
       </div>
-    </div>
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         PANEL 2 : TARIFS & RÈGLEMENT
-         ═══════════════════════════════════════════════════════════════ -->
-    <div class="member-panel" id="panel-tarifs">
-      <div style="background:#ffffff; border:1px solid #e0e0e0; padding:2rem; margin-bottom:2.5rem;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:1.4rem; color:#111111; text-transform:uppercase; margin-bottom:1.25rem; border-bottom:2px solid #FFC800; padding-bottom:0.5rem;">
-          Grille des Cotisations — Saison 2026/2027
-        </h3>
-        <p style="font-family:'Roboto',sans-serif; color:#555555; line-height:1.7; margin-bottom:1.5rem; font-size:0.95rem;">
-          La cotisation annuelle est forfaitaire et couvre l'ensemble de la saison sportive (de septembre à juin, hors vacances scolaires de la zone C). <strong>La licence fédérale officielle et l'assurance FFKaraté sont incluses dans la cotisation.</strong>
-        </p>
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem;">
-          
-          <div style="border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:1.5rem; background:#fafafa;">
-            <span style="font-family:'Oswald',sans-serif; font-size:0.8rem; color:#B38600; font-weight:700; text-transform:uppercase;">Enfants (7 à 12 ans)</span>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#111; margin:0.3rem 0;">Karaté Enfants</h4>
-            <p style="font-size:0.9rem; color:#666; margin-bottom:1rem; line-height:1.6;">
-              <strong>2 séances / semaine :</strong><br>
-              Mardi 18h15 - 19h15<br>
-              Vendredi 18h15 - 19h30
-            </p>
-            <div style="font-family:'Oswald',sans-serif; font-size:1.6rem; color:#111; font-weight:700;">190 € <span style="font-size:0.9rem; font-weight:400; color:#666;">/ an</span></div>
-            <p style="font-size:0.8rem; color:#888; margin-top:0.4rem;">Licence FFKaraté incluse</p>
-          </div>
-
-          <div style="border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:1.5rem; background:#fafafa;">
-            <span style="font-family:'Oswald',sans-serif; font-size:0.8rem; color:#B38600; font-weight:700; text-transform:uppercase;">Dès 13 ans & Adultes</span>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#111; margin:0.3rem 0;">Karaté & Kobudo</h4>
-            <p style="font-size:0.9rem; color:#666; margin-bottom:1rem; line-height:1.6;">
-              <strong>2 séances / semaine :</strong><br>
-              Mardi 19h15 - 20h30<br>
-              Vendredi 19h30 - 21h00
-            </p>
-            <div style="font-family:'Oswald',sans-serif; font-size:1.6rem; color:#111; font-weight:700;">230 € <span style="font-size:0.9rem; font-weight:400; color:#666;">/ an</span></div>
-            <p style="font-size:0.8rem; color:#888; margin-top:0.4rem;">Licence FFKaraté incluse</p>
-          </div>
-
-          <div style="border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:1.5rem; background:#fafafa;">
-            <span style="font-family:'Oswald',sans-serif; font-size:0.8rem; color:#B38600; font-weight:700; text-transform:uppercase;">Tous Âges (Adultes)</span>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#111; margin:0.3rem 0;">Tai Chi Chuan</h4>
-            <p style="font-size:0.9rem; color:#666; margin-bottom:1rem; line-height:1.6;">
-              <strong>1 séance / semaine :</strong><br>
-              Samedi 14h00 - 15h30<br>
-              Gymnase Coubertin
-            </p>
-            <div style="font-family:'Oswald',sans-serif; font-size:1.6rem; color:#111; font-weight:700;">180 € <span style="font-size:0.9rem; font-weight:400; color:#666;">/ an</span></div>
-            <p style="font-size:0.8rem; color:#888; margin-top:0.4rem;">Licence FFKaraté incluse</p>
-          </div>
-
-          <div style="border:1px solid #e0e0e0; border-top:4px solid #111111; padding:1.5rem; background:#ffffff;">
-            <span style="font-family:'Oswald',sans-serif; font-size:0.8rem; color:#111; font-weight:700; text-transform:uppercase;">Formule Complète</span>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#111; margin:0.3rem 0;">Karaté + Tai Chi</h4>
-            <p style="font-size:0.9rem; color:#666; margin-bottom:1rem; line-height:1.6;">
-              <strong>Accès illimité :</strong><br>
-              Mardi, Vendredi et Samedi<br>
-              Toutes disciplines AMB
-            </p>
-            <div style="font-family:'Oswald',sans-serif; font-size:1.6rem; color:#B38600; font-weight:700;">300 € <span style="font-size:0.9rem; font-weight:400; color:#666;">/ an</span></div>
-            <p style="font-size:0.8rem; color:#888; margin-top:0.4rem;">Tarif préférentiel combiné</p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- MOYENS DE PAIEMENT & AIDES -->
-      <div style="background:#ffffff; border:1px solid #e0e0e0; padding:2rem;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#111111; text-transform:uppercase; margin-bottom:1.25rem;">
-          Facilités de Règlement & Dispositifs d'Aide
-        </h3>
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
-          
-          <div style="border-left:3px solid #FFC800; padding-left:1rem;">
-            <h5 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin-bottom:0.3rem;">Pass'Sport (50€ Déduits)</h5>
-            <p style="font-size:0.9rem; color:#555; line-height:1.6;">
-              Le club est conventionné Pass'Sport. Indiquez simplement votre code alphanumérique individuel reçu par le Ministère lors du dépôt de votre dossier pour déduire 50€ du montant de la cotisation.
-            </p>
-          </div>
-
-          <div style="border-left:3px solid #FFC800; padding-left:1rem;">
-            <h5 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin-bottom:0.3rem;">Chèques-Vacances, Coupons Sport & Tickets Loisirs</h5>
-            <p style="font-size:0.9rem; color:#555; line-height:1.6;">
-              Nous acceptons les règlements par Chèques-Vacances ANCV, Coupons Sport ANCV (format papier ou e-chèques) ainsi que les Tickets Loisirs.
-            </p>
-          </div>
-
-          <div style="border-left:3px solid #FFC800; padding-left:1rem;">
-            <h5 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin-bottom:0.3rem;">Paiement en 3 Fois sans Frais</h5>
-            <p style="font-size:0.9rem; color:#555; line-height:1.6;">
-              Possibilité de régler par 3 chèques distincts remis lors de l'inscription (encaissement fin octobre, fin janvier et fin avril).
-            </p>
-          </div>
-
-          <div style="border-left:3px solid #FFC800; padding-left:1rem;">
-            <h5 style="font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; margin-bottom:0.3rem;">Réduction Famille</h5>
-            <p style="font-size:0.9rem; color:#555; line-height:1.6;">
-              Une réduction de <strong>15%</strong> est appliquée sur la deuxième adhésion et les suivantes pour les membres d'une même famille (même foyer fiscal).
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════════════════════
-         PANEL 3 : LICENCE FÉDÉRALE & SUIVI MÉDICAL
-         ═══════════════════════════════════════════════════════════════ -->
-    <div class="member-panel" id="panel-licence">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
-        
-        <div style="background:#ffffff; border:1px solid #e0e0e0; padding:2rem; border-top:4px solid #FFC800;">
-          <h3 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#111111; text-transform:uppercase; margin-bottom:1rem;">
-            La Licence FFKaraté
-          </h3>
-          <p style="font-size:0.92rem; color:#444; line-height:1.7; margin-bottom:1rem;">
-            Affiliée à la Fédération Française de Karaté (FFKaraté), l'école Arts Martiaux de Brunoy délivre à chaque pratiquant sa licence officielle annuelle.
-          </p>
-          <ul style="padding-left:1.25rem; font-size:0.9rem; color:#555; line-height:1.8;">
-            <li><strong>Assurance incluse :</strong> Couverture responsabilité civile et dommages corporels lors des entraînements et des stages.</li>
-            <li><strong>Reconnaissance officielle :</strong> Validation légale des ceintures et diplômes d'État (du 1er Dan au grade de Maître).</li>
-            <li><strong>Stages & Événements :</strong> Droit de participer aux stages départementaux, régionaux et nationaux de Karaté et Kobudo.</li>
-            <li><strong>Passeport sportif :</strong> Carnet officiel délivré sur demande (25€, valable 8 ans) pour certifier l'ancienneté martiale.</li>
+      <!-- Infos Licence & Médical — Résumé compact -->
+      <div style="margin-top:2rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+        <div style="background:#fff; border:1px solid #e0e0e0; border-top:3px solid #FFC800; padding:1.25rem;">
+          <h4 style="font-family:'Oswald',sans-serif; font-size:1rem; color:#111; text-transform:uppercase; margin-bottom:0.5rem;">Licence FFKaraté</h4>
+          <ul style="padding-left:1rem; font-size:0.85rem; color:#555; line-height:1.7; margin:0;">
+            <li>Assurance RC & corporelle incluse</li>
+            <li>Validation officielle des grades</li>
+            <li>Accès aux stages fédéraux</li>
+            <li>Passeport sportif : 25 € (valable 8 ans)</li>
           </ul>
         </div>
-
-        <div style="background:#ffffff; border:1px solid #e0e0e0; padding:2rem; border-top:4px solid #FFC800;">
-          <h3 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#111111; text-transform:uppercase; margin-bottom:1rem;">
-            Réglementation Médicale en Vigueur
-          </h3>
-          <p style="font-size:0.92rem; color:#444; line-height:1.7; margin-bottom:1rem;">
-            Conformément aux directives du Ministère des Sports et au décret n° 2021-564 :
-          </p>
-          <div style="background:#f9f9f9; padding:1rem; border-left:3px solid #FFC800; margin-bottom:1rem;">
-            <h5 style="font-family:'Oswald',sans-serif; font-size:1rem; color:#111; margin-bottom:0.3rem;">Pour les Mineurs (Enfants & Ados) :</h5>
-            <p style="font-size:0.88rem; color:#555; margin:0; line-height:1.6;">
-              Le certificat médical n'est plus obligatoire. Le représentant légal remplit le questionnaire de santé pour mineurs. Si toutes les réponses sont négatives, une simple attestation suffit.
-            </p>
-          </div>
-          <div style="background:#f9f9f9; padding:1rem; border-left:3px solid #111;">
-            <h5 style="font-family:'Oswald',sans-serif; font-size:1rem; color:#111; margin-bottom:0.3rem;">Pour les Adultes (Karaté & Tai Chi) :</h5>
-            <p style="font-size:0.88rem; color:#555; margin:0; line-height:1.6;">
-              Un certificat médical est exigé lors de la première adhésion. Pour les renouvellements, le certificat reste valable 3 saisons sous réserve d'attester avoir répondu négativement au questionnaire annuel QS-Sport.
-            </p>
-          </div>
+        <div style="background:#fff; border:1px solid #e0e0e0; border-top:3px solid #111; padding:1.25rem;">
+          <h4 style="font-family:'Oswald',sans-serif; font-size:1rem; color:#111; text-transform:uppercase; margin-bottom:0.5rem;">Réglementation Médicale</h4>
+          <ul style="padding-left:1rem; font-size:0.85rem; color:#555; line-height:1.7; margin:0;">
+            <li><strong>Mineurs :</strong> QS-Sport + attestation (pas de certificat si tout NON)</li>
+            <li><strong>Adultes 1re inscription :</strong> Certificat médical obligatoire</li>
+            <li><strong>Renouvellement :</strong> Certificat valable 3 saisons si QS-Sport négatif</li>
+          </ul>
         </div>
-
       </div>
-    </div>
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         PANEL 4 : RÈGLEMENT INTÉRIEUR & CHARTE DU DOJO
-         ═══════════════════════════════════════════════════════════════ -->
-    <div class="member-panel" id="panel-reglement">
-      <div style="background:#ffffff; border:1px solid #e0e0e0; padding:2.5rem; max-width:900px; margin:0 auto;">
-        <div style="text-align:center; margin-bottom:2rem;">
-          <h3 style="font-family:'Oswald',sans-serif; font-size:1.6rem; color:#111111; text-transform:uppercase; margin-bottom:0.5rem;">
-            Règlement Intérieur & Charte Éthique du Dojo
-          </h3>
-          <p style="color:#666; font-size:0.95rem;">Association Arts Martiaux de Brunoy — Gymnase Pierre de Coubertin</p>
-          <div style="width:60px; height:3px; background:#FFC800; margin:1rem auto 0;"></div>
-        </div>
-
-        <div style="display:flex; flex-direction:column; gap:1.75rem; font-family:'Roboto',sans-serif; font-size:0.92rem; color:#444; line-height:1.8;">
-          <div>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#111; text-transform:uppercase; margin-bottom:0.4rem;">
-              Article 1 — Salut & Étiquette Martiale (Rei)
-            </h4>
-            <p>
-              Le dojo est un lieu de respect et de recherche personnelle. Tout pratiquant doit saluer le tatami en entrant et en sortant de la salle. Le salut cérémonial traditionnel ouvre et clôture chaque séance sous la direction de l'enseignant.
-            </p>
-          </div>
-
-          <div>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#111; text-transform:uppercase; margin-bottom:0.4rem;">
-              Article 2 — Ponctualité & Présence
-            </h4>
-            <p>
-              Les élèves doivent se présenter au moins 10 minutes avant le début du cours afin de se changer dans les vestiaires. En cas de retard exceptionnel, le pratiquant attend l'autorisation de l'enseignant sur le bord du tatami avant d'intégrer le cours.
-            </p>
-          </div>
-
-          <div>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#111; text-transform:uppercase; margin-bottom:0.4rem;">
-              Article 3 — Hygiène & Tenue Vestimentaire
-            </h4>
-            <p>
-              Le Karategi (kimono) doit être propre et repassé, orné de l'écusson du club le cas échéant. Les ongles des mains et des pieds doivent être coupés court pour éviter toute blessure. Par mesure absolue de sécurité, le port de montres, bijoux, bagues et boucles d'oreilles est strictement interdit pendant la pratique.
-            </p>
-          </div>
-
-          <div>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#111; text-transform:uppercase; margin-bottom:0.4rem;">
-              Article 4 — Sécurité & Maniement des Armes (Kobudo)
-            </h4>
-            <p>
-              Les armes traditionnelles d'entraînement (Bō, Saï, Tonfa, Nunchaku) doivent être vérifiées avant chaque utilisation. Leur maniement s'effectue exclusivement sous la supervision directe du professeur et conformément aux consignes de sécurité édictées.
-            </p>
-          </div>
-
-          <div>
-            <h4 style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#111; text-transform:uppercase; margin-bottom:0.4rem;">
-              Article 5 — Esprit de Camaraderie & Non-Violence
-            </h4>
-            <p>
-              Le Karaté Shorinji Ryu enseigne le contrôle de soi et le refus de toute violence gratuite. Tout acte d'agressivité, de provocation ou d'irrespect envers un partenaire, un enseignant ou les locaux entraînera une exclusion immédiate décidée par le bureau de l'association.
-            </p>
+      <!-- Règlement intérieur en accordéon -->
+      <div style="margin-top:1.5rem; background:#fff; border:1px solid #e0e0e0;">
+        <button onclick="toggleReglement()" id="btn-reglement-toggle" style="width:100%; display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; background:none; border:none; cursor:pointer; font-family:'Oswald',sans-serif; font-size:1.05rem; color:#111; text-transform:uppercase;">
+          Règlement Intérieur & Charte du Dojo
+          <span id="reglement-chevron" style="font-size:1.2rem; transition:transform 0.3s;">&#9660;</span>
+        </button>
+        <div id="reglement-content" style="display:none; padding:0 1.25rem 1.25rem; font-family:'Roboto',sans-serif; font-size:0.88rem; color:#444; line-height:1.75;">
+          <div style="border-top:1px solid #eee; padding-top:1rem;">
+            <p><strong>Art. 1 — Salut :</strong> Saluer le tatami en entrant et en sortant. Le salut cérémonial ouvre et clôture chaque séance.</p>
+            <p><strong>Art. 2 — Ponctualité :</strong> Se présenter 10 min avant le cours. En cas de retard, attendre l'autorisation de l'enseignant.</p>
+            <p><strong>Art. 3 — Tenue :</strong> Karategi propre et repassé. Ongles coupés courts. Aucun bijou, montre ou piercing sur le tatami.</p>
+            <p><strong>Art. 4 — Armes :</strong> Les armes de Kobudo doivent être vérifiées avant chaque utilisation, sous supervision du professeur uniquement.</p>
+            <p><strong>Art. 5 — Esprit martial :</strong> Contrôle de soi obligatoire. Toute violence ou irrespect entraîne une exclusion immédiate.</p>
           </div>
         </div>
       </div>
+
     </div>
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         PANEL 5 : PORTAIL ADHÉRENT & MON COMPTE (INTERACTIF)
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- PANEL 2 : TARIFS & AIDES — Simplifié                  -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="member-panel" id="panel-tarifs">
+
+      <!-- Grille tarifaire compacte -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem; margin-bottom:2rem;">
+        
+        <div style="background:#fff; border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:1.5rem; text-align:center;">
+          <span style="font-family:'Oswald',sans-serif; font-size:0.75rem; color:#B38600; font-weight:700; text-transform:uppercase;">Enfants (7-12 ans)</span>
+          <h4 style="font-family:'Oswald',sans-serif; font-size:1.2rem; color:#111; margin:0.25rem 0;">Karaté Enfants</h4>
+          <p style="font-size:0.82rem; color:#666; line-height:1.5; margin-bottom:0.75rem;">Mardi 18h15 & Vendredi 18h15</p>
+          <div style="font-family:'Oswald',sans-serif; font-size:1.5rem; color:#111; font-weight:700;">190 € <span style="font-size:0.8rem; font-weight:400; color:#888;">/ an</span></div>
+          <p style="font-size:0.75rem; color:#999; margin-top:0.3rem;">Licence FFKaraté incluse</p>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:1.5rem; text-align:center;">
+          <span style="font-family:'Oswald',sans-serif; font-size:0.75rem; color:#B38600; font-weight:700; text-transform:uppercase;">Ados & Adultes</span>
+          <h4 style="font-family:'Oswald',sans-serif; font-size:1.2rem; color:#111; margin:0.25rem 0;">Karaté & Kobudo</h4>
+          <p style="font-size:0.82rem; color:#666; line-height:1.5; margin-bottom:0.75rem;">Mardi 19h15 & Vendredi 19h30</p>
+          <div style="font-family:'Oswald',sans-serif; font-size:1.5rem; color:#111; font-weight:700;">230 € <span style="font-size:0.8rem; font-weight:400; color:#888;">/ an</span></div>
+          <p style="font-size:0.75rem; color:#999; margin-top:0.3rem;">Licence FFKaraté incluse</p>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:1.5rem; text-align:center;">
+          <span style="font-family:'Oswald',sans-serif; font-size:0.75rem; color:#B38600; font-weight:700; text-transform:uppercase;">Adultes</span>
+          <h4 style="font-family:'Oswald',sans-serif; font-size:1.2rem; color:#111; margin:0.25rem 0;">Tai Chi Chuan</h4>
+          <p style="font-size:0.82rem; color:#666; line-height:1.5; margin-bottom:0.75rem;">Samedi 14h00 - 15h30</p>
+          <div style="font-family:'Oswald',sans-serif; font-size:1.5rem; color:#111; font-weight:700;">180 € <span style="font-size:0.8rem; font-weight:400; color:#888;">/ an</span></div>
+          <p style="font-size:0.75rem; color:#999; margin-top:0.3rem;">Licence FFKaraté incluse</p>
+        </div>
+
+        <div style="background:#fff; border:1px solid #e0e0e0; border-top:4px solid #111; padding:1.5rem; text-align:center;">
+          <span style="font-family:'Oswald',sans-serif; font-size:0.75rem; color:#111; font-weight:700; text-transform:uppercase;">Formule Complète</span>
+          <h4 style="font-family:'Oswald',sans-serif; font-size:1.2rem; color:#111; margin:0.25rem 0;">Karaté + Tai Chi</h4>
+          <p style="font-size:0.82rem; color:#666; line-height:1.5; margin-bottom:0.75rem;">Accès à toutes les séances</p>
+          <div style="font-family:'Oswald',sans-serif; font-size:1.5rem; color:#B38600; font-weight:700;">300 € <span style="font-size:0.8rem; font-weight:400; color:#888;">/ an</span></div>
+          <p style="font-size:0.75rem; color:#999; margin-top:0.3rem;">Tarif préférentiel combiné</p>
+        </div>
+      </div>
+
+      <!-- Aides et facilités — Compact en ligne -->
+      <div style="background:#fff; border:1px solid #e0e0e0; padding:1.5rem;">
+        <h4 style="font-family:'Oswald',sans-serif; font-size:1.1rem; color:#111; text-transform:uppercase; margin-bottom:1rem;">Facilités de règlement</h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; font-size:0.88rem; color:#555; line-height:1.6;">
+          <div style="border-left:3px solid #FFC800; padding-left:0.75rem;">
+            <strong style="color:#111;">Pass'Sport</strong> — 50 € déduits de la cotisation (aide d'État)
+          </div>
+          <div style="border-left:3px solid #FFC800; padding-left:0.75rem;">
+            <strong style="color:#111;">Chèques-Vacances & Coupons Sport</strong> — ANCV papier ou e-chèques
+          </div>
+          <div style="border-left:3px solid #FFC800; padding-left:0.75rem;">
+            <strong style="color:#111;">Tickets Loisirs</strong> — Acceptés pour la cotisation
+          </div>
+          <div style="border-left:3px solid #FFC800; padding-left:0.75rem;">
+            <strong style="color:#111;">Paiement en 3x</strong> — 3 chèques (oct., janv., avril)
+          </div>
+          <div style="border-left:3px solid #FFC800; padding-left:0.75rem;">
+            <strong style="color:#111;">Réduction famille</strong> — 15 % dès la 2e inscription (même foyer)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- PANEL 3 : MON ESPACE (PORTAIL ADHÉRENT)                -->
+    <!-- ═══════════════════════════════════════════════════════ -->
     <div class="member-panel" id="panel-compte">
       
       <!-- État non connecté -->
-      <div id="auth-logged-out" style="max-width:440px; margin:0 auto; background:#ffffff; border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:2.5rem 2rem;">
-        <div style="text-align:center; margin-bottom:1.5rem;">
-          <img src="images/logo/logo.png" alt="AMB" style="width:65px; margin:0 auto 0.75rem; display:block;">
-          <h3 style="font-family:'Oswald',sans-serif; font-size:1.5rem; color:#111111; text-transform:uppercase; margin-bottom:0.3rem;">
-            Connexion Adhérent
-          </h3>
-          <p style="font-size:0.88rem; color:#666;">
-            Accédez à vos attestations personnelles et au suivi de votre dossier.
-          </p>
+      <div id="auth-logged-out" style="max-width:400px; margin:0 auto; background:#fff; border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:2rem;">
+        <div style="text-align:center; margin-bottom:1.25rem;">
+          <img src="images/logo/logo.png" alt="AMB" style="width:55px; margin:0 auto 0.5rem; display:block;">
+          <h3 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#111; text-transform:uppercase; margin:0;">Connexion Adhérent</h3>
+          <p style="font-size:0.82rem; color:#888; margin-top:0.2rem;">Accédez à vos attestations et au suivi de votre dossier.</p>
         </div>
 
-        <form id="login-form" onsubmit="handleMemberLogin(event)" style="display:flex; flex-direction:column; gap:1.1rem;">
+        <form id="login-form" onsubmit="handleMemberLogin(event)" style="display:flex; flex-direction:column; gap:0.9rem;">
           <div>
-            <label style="display:block; font-size:0.85rem; font-weight:600; color:#333; margin-bottom:0.35rem;">Identifiant ou E-mail :</label>
-            <input type="email" id="login-email" value="adherent@artsmartiaux-brunoy.fr" required style="width:100%; padding:0.75rem; border:1px solid #ccc; font-family:inherit; font-size:0.95rem; box-sizing:border-box;">
+            <label style="display:block; font-size:0.8rem; font-weight:600; color:#333; margin-bottom:0.25rem;">E-mail :</label>
+            <input type="email" id="login-email" value="adherent@artsmartiaux-brunoy.fr" required style="width:100%; padding:0.65rem; border:1px solid #ccc; font-family:inherit; font-size:0.9rem; box-sizing:border-box;">
           </div>
           <div>
-            <label style="display:block; font-size:0.85rem; font-weight:600; color:#333; margin-bottom:0.35rem;">Mot de passe :</label>
-            <input type="password" id="login-password" value="karate91800" required style="width:100%; padding:0.75rem; border:1px solid #ccc; font-family:inherit; font-size:0.95rem; box-sizing:border-box;">
+            <label style="display:block; font-size:0.8rem; font-weight:600; color:#333; margin-bottom:0.25rem;">Mot de passe :</label>
+            <input type="password" id="login-password" value="karate91800" required style="width:100%; padding:0.65rem; border:1px solid #ccc; font-family:inherit; font-size:0.9rem; box-sizing:border-box;">
           </div>
-          <button type="submit" style="background:#FFC800; color:#111111; font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:700; text-transform:uppercase; border:none; padding:0.85rem; cursor:pointer; margin-top:0.5rem;">
-            Se Connecter
-          </button>
+          <button type="submit" style="background:#FFC800; color:#111; font-family:'Oswald',sans-serif; font-size:1rem; font-weight:700; text-transform:uppercase; border:none; padding:0.75rem; cursor:pointer;">Se Connecter</button>
         </form>
 
-        <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid #eee; text-align:center;">
-          <p style="font-size:0.82rem; color:#777; margin-bottom:0.75rem;">
-            Espace de démonstration adhérent pré-rempli.
-          </p>
-          <button onclick="handleMemberLogin(null)" style="background:#f0f0f0; border:1px solid #ccc; padding:0.5rem 1rem; font-size:0.82rem; cursor:pointer; font-weight:600; color:#333;">
-            Accès Immédiat (Démonstration Adhérent)
-          </button>
+        <div style="margin-top:1rem; text-align:center; border-top:1px solid #eee; padding-top:0.75rem;">
+          <button onclick="handleMemberLogin(null)" style="background:#f0f0f0; border:1px solid #ccc; padding:0.4rem 0.8rem; font-size:0.78rem; cursor:pointer; font-weight:600; color:#333;">Tester le Compte Démo</button>
         </div>
       </div>
 
-      <!-- État connecté (Tableau de bord adhérent) -->
-      <div id="auth-logged-in" style="display:none; max-width:850px; margin:0 auto; background:#ffffff; border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:2.5rem;">
+      <!-- État connecté (Tableau de bord) -->
+      <div id="auth-logged-in" style="display:none; max-width:800px; margin:0 auto; background:#fff; border:1px solid #e0e0e0; border-top:4px solid #FFC800; padding:2rem;">
         
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; border-bottom:2px solid #f0f0f0; padding-bottom:1.5rem; margin-bottom:2rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; border-bottom:1px solid #eee; padding-bottom:1rem; margin-bottom:1.5rem;">
           <div>
-            <span style="display:inline-block; font-family:'Oswald',sans-serif; font-size:0.8rem; background:#FFC800; color:#111; padding:3px 8px; font-weight:700; text-transform:uppercase; margin-bottom:0.4rem;">
-              Adhérent AMB Validé
-            </span>
-            <h3 style="font-family:'Oswald',sans-serif; font-size:1.8rem; color:#111; text-transform:uppercase; margin:0;" id="user-display-name">
-              Thomas DUBOIS
-            </h3>
-            <p style="font-size:0.9rem; color:#666; margin-top:0.3rem;">
-              Licence FFKaraté n° <strong id="user-license-num">910482910-K</strong> — Section Karaté Traditionnel & Kobudo
-            </p>
+            <span style="display:inline-block; font-family:'Oswald',sans-serif; font-size:0.75rem; background:#FFC800; color:#111; padding:2px 7px; font-weight:700; text-transform:uppercase;">Adhérent Validé</span>
+            <h3 style="font-family:'Oswald',sans-serif; font-size:1.5rem; color:#111; text-transform:uppercase; margin:0.2rem 0 0;" id="user-display-name">Thomas DUBOIS</h3>
+            <p style="font-size:0.82rem; color:#666; margin:0;">Licence n° <strong id="user-license-num">910482910-K</strong> — Karaté & Kobudo</p>
           </div>
-          <button onclick="handleMemberLogout()" style="background:#f5f5f5; border:1px solid #ddd; color:#444; padding:0.6rem 1.2rem; font-family:'Oswald',sans-serif; font-size:0.85rem; text-transform:uppercase; cursor:pointer; font-weight:600;">
-            Se Déconnecter
-          </button>
+          <button onclick="handleMemberLogout()" style="background:#f5f5f5; border:1px solid #ddd; color:#444; padding:0.5rem 1rem; font-family:'Oswald',sans-serif; font-size:0.8rem; text-transform:uppercase; cursor:pointer; font-weight:600;">Déconnexion</button>
         </div>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem; margin-bottom:2rem;">
-          <div style="background:#f9f9f9; border:1px solid #eee; padding:1.25rem; text-align:center;">
-            <span style="font-size:0.8rem; color:#888; text-transform:uppercase;">Statut Dossier</span>
-            <div style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#111; font-weight:700; margin-top:0.25rem;">
-              Complet (Saison 26/27)
-            </div>
+        <!-- Indicateurs compacts -->
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin-bottom:1.5rem;">
+          <div style="background:#f9f9f9; border:1px solid #eee; padding:1rem; text-align:center;">
+            <span style="font-size:0.72rem; color:#888; text-transform:uppercase;">Dossier</span>
+            <div style="font-family:'Oswald',sans-serif; font-size:1rem; color:#111; font-weight:700; margin-top:0.15rem;">Complet</div>
           </div>
-          <div style="background:#f9f9f9; border:1px solid #eee; padding:1.25rem; text-align:center;">
-            <span style="font-size:0.8rem; color:#888; text-transform:uppercase;">Cotisation Annuelle</span>
-            <div style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#B38600; font-weight:700; margin-top:0.25rem;">
-              Réglée (230,00 €)
-            </div>
+          <div style="background:#f9f9f9; border:1px solid #eee; padding:1rem; text-align:center;">
+            <span style="font-size:0.72rem; color:#888; text-transform:uppercase;">Cotisation</span>
+            <div style="font-family:'Oswald',sans-serif; font-size:1rem; color:#B38600; font-weight:700; margin-top:0.15rem;">230 € Réglée</div>
           </div>
-          <div style="background:#f9f9f9; border:1px solid #eee; padding:1.25rem; text-align:center;">
-            <span style="font-size:0.8rem; color:#888; text-transform:uppercase;">Suivi Médical</span>
-            <div style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#111; font-weight:700; margin-top:0.25rem;">
-              QS-Sport Validé
-            </div>
+          <div style="background:#f9f9f9; border:1px solid #eee; padding:1rem; text-align:center;">
+            <span style="font-size:0.72rem; color:#888; text-transform:uppercase;">Médical</span>
+            <div style="font-family:'Oswald',sans-serif; font-size:1rem; color:#111; font-weight:700; margin-top:0.15rem;">QS Validé</div>
           </div>
         </div>
 
-        <h4 style="font-family:'Oswald',sans-serif; font-size:1.2rem; color:#111; text-transform:uppercase; margin-bottom:1rem;">
-          Vos Documents & Justificatifs Personnels
-        </h4>
-
-        <div style="display:flex; flex-direction:column; gap:1rem;">
-          <div style="display:flex; justify-content:space-between; align-items:center; background:#fafafa; border:1px solid #eee; padding:1rem 1.25rem; flex-wrap:wrap; gap:0.75rem;">
-            <div>
-              <strong style="font-size:0.95rem; color:#111;">Attestation de Cotisation / Remboursement CE</strong>
-              <p style="font-size:0.85rem; color:#666; margin:0.2rem 0 0;">Justificatif nominatif acquitté à destination de votre employeur ou mutuelle.</p>
-            </div>
-            <button class="btn-doc-primary" onclick="openDocModal('attestation-ce')">Télécharger l'Attestation</button>
+        <!-- Actions rapides -->
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; background:#fafafa; border:1px solid #eee; padding:0.85rem 1rem; flex-wrap:wrap; gap:0.5rem;">
+            <strong style="font-size:0.9rem; color:#111;">Attestation de Cotisation (CE / Mutuelle)</strong>
+            <button class="btn-doc-primary" onclick="openDocModal('attestation-ce')">Télécharger</button>
           </div>
-
-          <div style="display:flex; justify-content:space-between; align-items:center; background:#fafafa; border:1px solid #eee; padding:1rem 1.25rem; flex-wrap:wrap; gap:0.75rem;">
-            <div>
-              <strong style="font-size:0.95rem; color:#111;">Planning des Prochains Passages de Grades (Kyu)</strong>
-              <p style="font-size:0.85rem; color:#666; margin:0.2rem 0 0;">Dates des évaluations de mi-saison et passages de ceintures au dojo Coubertin.</p>
-            </div>
-            <button class="btn-doc-secondary" onclick="openDocModal('grades-info')">Consulter les Dates</button>
+          <div style="display:flex; justify-content:space-between; align-items:center; background:#fafafa; border:1px solid #eee; padding:0.85rem 1rem; flex-wrap:wrap; gap:0.5rem;">
+            <strong style="font-size:0.9rem; color:#111;">Passages de Grades (Kyu) — Dates</strong>
+            <button class="btn-doc-secondary" onclick="openDocModal('grades-info')">Consulter</button>
           </div>
         </div>
 
       </div>
-
     </div>
 
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     MODAL POPUP : VISUALISATION & IMPRESSION DE DOCUMENTS
-     ═══════════════════════════════════════════════════════════════ -->
+<!-- MODAL DOCUMENTS (INCHANGÉ) -->
 <div class="doc-modal-overlay" id="docModalOverlay">
   <div class="doc-modal-container">
     <button class="doc-modal-close" onclick="closeDocModal()">&times;</button>
-    
-    <!-- Barre d'action supérieure -->
     <div class="doc-modal-actions-bar" style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee; padding-bottom:1rem; margin-bottom:1.5rem;">
       <span style="font-family:'Oswald',sans-serif; font-size:1.1rem; color:#111; text-transform:uppercase;" id="modalDocumentTitle">Document Officiel AMB</span>
-      <button onclick="window.print()" style="background:#FFC800; color:#111; border:none; padding:8px 16px; font-family:'Oswald',sans-serif; font-size:0.9rem; font-weight:700; cursor:pointer; text-transform:uppercase;">
-        Imprimer / Sauvegarder en PDF
-      </button>
+      <button onclick="window.print()" style="background:#FFC800; color:#111; border:none; padding:8px 16px; font-family:'Oswald',sans-serif; font-size:0.9rem; font-weight:700; cursor:pointer; text-transform:uppercase;">Imprimer / PDF</button>
     </div>
-
-    <!-- Conteneur dynamique du document -->
-    <div id="modalDocumentContent">
-      <!-- Le contenu sera injecté en JS -->
-    </div>
+    <div id="modalDocumentContent"></div>
   </div>
 </div>
 
@@ -532,50 +312,40 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
-      
       <div class="footer-brand">
         <a href="accueil1.html" class="footer-logo-row">
           <img src="images/logo/logo.png" alt="Arts Martiaux de Brunoy" class="footer-logo-img">
           <span class="footer-brand-title">Arts Martiaux de Brunoy</span>
         </a>
-        <p class="footer-brand-desc">
-          École de Karaté traditionnel (style Shorinji Ryu), maniement des armes anciennes (Kobudo) et pratique du Tai Chi Chuan à Brunoy (91).
-        </p>
-        <div class="footer-badge">
-          <span>Affilié FFKaraté & Agréé Pass Sport</span>
-        </div>
+        <p class="footer-brand-desc">École de Karaté traditionnel (style Shorinji Ryu), maniement des armes anciennes (Kobudo) et pratique du Tai Chi Chuan à Brunoy (91).</p>
+        <div class="footer-badge"><span>Affilié FFKaraté &amp; Agréé Pass Sport</span></div>
       </div>
-
       <div>
         <h4 class="footer-col-title">Disciplines</h4>
         <ul class="footer-links-list">
-          <li><a href="histoire.html">Histoire & Tradition</a></li>
+          <li><a href="histoire.html">Histoire &amp; Tradition</a></li>
           <li><a href="karate.html">Karaté Shorinji Ryu</a></li>
           <li><a href="kobudo.html">Kobudo (Armes Anciennes)</a></li>
           <li><a href="tai-chi-chuan.html">Tai Chi Chuan</a></li>
           <li><a href="galerie.html">Galerie Photos</a></li>
         </ul>
       </div>
-
       <div>
         <h4 class="footer-col-title">Informations</h4>
         <ul class="footer-links-list">
           <li><a href="accueil1.html#instructeurs">Équipe Enseignante</a></li>
           <li><a href="bureau-amb.html">Bureau de l'AMB</a></li>
-          <li><a href="espace-membres.html">Tarifs & Inscriptions</a></li>
+          <li><a href="espace-membres.html">Tarifs &amp; Inscriptions</a></li>
           <li><a href="espace-membres.html">Espace Membres</a></li>
-          <li><a href="accueil1.html#contact">Contact & Accès</a></li>
+          <li><a href="accueil1.html#contact">Contact &amp; Accès</a></li>
         </ul>
       </div>
-
       <div class="footer-contact-info">
-        <h4 class="footer-col-title">Contact & Lieu</h4>
+        <h4 class="footer-col-title">Contact &amp; Lieu</h4>
         <p><strong>Gymnase Pierre de Coubertin</strong><br>Salle au 1er étage<br>7 rue de l'Espérance, 91800 Brunoy</p>
-        <p style="margin-top:0.75rem;"><strong>Horaires :</strong><br>Mardi & Vendredi (Karaté)<br>Samedi (Tai Chi Chuan)</p>
+        <p style="margin-top:0.75rem;"><strong>Horaires :</strong><br>Mardi &amp; Vendredi (Karaté)<br>Samedi (Tai Chi Chuan)</p>
       </div>
-
     </div>
-
     <div class="footer-bottom">
       <p>&copy; 2026 Arts Martiaux de Brunoy. Tous droits réservés.</p>
       <div class="footer-bottom-links">
@@ -593,15 +363,25 @@
 function switchTab(tabKey) {
   var panels = document.querySelectorAll('.member-panel');
   var btns = document.querySelectorAll('.member-tab-btn');
-  
   panels.forEach(function(p) { p.classList.remove('active'); });
   btns.forEach(function(b) { b.classList.remove('active'); });
-  
   var targetPanel = document.getElementById('panel-' + tabKey);
   var targetBtn = document.getElementById('btn-tab-' + tabKey);
-  
   if (targetPanel) targetPanel.classList.add('active');
   if (targetBtn) targetBtn.classList.add('active');
+}
+
+// Accordéon Règlement Intérieur
+function toggleReglement() {
+  var content = document.getElementById('reglement-content');
+  var chevron = document.getElementById('reglement-chevron');
+  if (content.style.display === 'none') {
+    content.style.display = 'block';
+    chevron.style.transform = 'rotate(180deg)';
+  } else {
+    content.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+  }
 }
 
 // Gestion de session adhérent
@@ -624,11 +404,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('auth-logged-out').style.display = 'none';
     document.getElementById('auth-logged-in').style.display = 'block';
   }
-  
-  // Hash navigation
   if (window.location.hash) {
     var h = window.location.hash.replace('#tab-', '').replace('#', '');
-    if (['docs', 'tarifs', 'licence', 'reglement', 'compte'].indexOf(h) !== -1) {
+    if (['docs', 'tarifs', 'compte'].indexOf(h) !== -1) {
       switchTab(h);
     }
   }
@@ -639,7 +417,6 @@ function openDocModal(docType) {
   var overlay = document.getElementById('docModalOverlay');
   var container = document.getElementById('modalDocumentContent');
   var titleEl = document.getElementById('modalDocumentTitle');
-  
   var content = '';
   
   if (docType === 'inscription') {
@@ -652,7 +429,6 @@ function openDocModal(docType) {
           <p style="font-size:0.85rem; color:#777; margin:0;">Gymnase Pierre de Coubertin, 7 rue de l'Espérance, 91800 Brunoy</p>
           <h3 style="font-family:'Oswald',sans-serif; font-size:1.3rem; color:#B38600; text-transform:uppercase; margin-top:0.75rem;">FICHE D'INSCRIPTION — SAISON 2026 / 2027</h3>
         </div>
-
         <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:0.9rem;">
           <tr><td style="padding:6px; border:1px solid #ccc; width:30%; background:#f5f5f5;"><strong>Nom :</strong></td><td style="padding:6px; border:1px solid #ccc;">...............................................................</td></tr>
           <tr><td style="padding:6px; border:1px solid #ccc; background:#f5f5f5;"><strong>Prénom :</strong></td><td style="padding:6px; border:1px solid #ccc;">...............................................................</td></tr>
@@ -662,7 +438,6 @@ function openDocModal(docType) {
           <tr><td style="padding:6px; border:1px solid #ccc; background:#f5f5f5;"><strong>E-mail :</strong></td><td style="padding:6px; border:1px solid #ccc;">...............................................................</td></tr>
           <tr><td style="padding:6px; border:1px solid #ccc; background:#f5f5f5;"><strong>Personne à prévenir :</strong></td><td style="padding:6px; border:1px solid #ccc;">Nom : ................................... Tél : ......................................</td></tr>
         </table>
-
         <div style="background:#fafafa; border:1px solid #ddd; padding:1rem; margin-bottom:1.5rem; font-size:0.9rem;">
           <strong style="text-transform:uppercase; font-size:0.95rem;">Discipline(s) Choisie(s) :</strong><br><br>
           [ ] Karaté Enfants 7-12 ans (Mardi & Vendredi 18h15) — 190 €<br>
@@ -670,12 +445,10 @@ function openDocModal(docType) {
           [ ] Tai Chi Chuan Adultes (Samedi 14h00 - 15h30) — 180 €<br>
           [ ] Formule Complète Karaté + Tai Chi Chuan — 300 €
         </div>
-
         <div style="font-size:0.85rem; color:#555; margin-bottom:1.5rem; line-height:1.5;">
           <strong>Engagement de l'adhérent :</strong> Je soussigné(e) déclare avoir pris connaissance du règlement intérieur de l'association Arts Martiaux de Brunoy et m'engage à le respecter scrupuleusement. J'atteste avoir fourni les justificatifs médicaux requis.<br><br>
           [ ] J'autorise l'AMB à photographier ou filmer dans le cadre strict des activités du club et des démonstrations.
         </div>
-
         <div style="display:flex; justify-content:space-between; margin-top:2rem; padding-top:1rem; border-top:1px solid #ccc; font-size:0.9rem;">
           <div>Fait à Brunoy, le ..... / ..... / 2026</div>
           <div style="text-align:right;">Signature de l'adhérent (ou représentant légal) :<br><br><br>.......................................................</div>
@@ -741,7 +514,7 @@ function openDocModal(docType) {
         </ul>
         <p style="margin-top:1.5rem; font-size:0.9rem; color:#555;">La présente attestation est délivrée à l'intéressé(e) pour servir et valoir ce que de droit auprès de son Comité d'Entreprise, CSE ou organisme de mutuelle.</p>
         <div style="display:flex; justify-content:space-between; margin-top:2.5rem; align-items:flex-end;">
-          <div>Fait à Brunoy, le 13/10/2026</div>
+          <div>Fait à Brunoy, le 22/10/2026</div>
           <div style="text-align:center; border:2px dashed #999; padding:1rem 2rem;">
             Cachet de l'Association AMB<br><br>
             <em>Pour le Bureau Exécutif</em>
@@ -773,16 +546,16 @@ function openDocModal(docType) {
     content = `
       <div style="font-family:'Roboto',sans-serif; color:#111; line-height:1.6;">
         <h3 style="font-family:'Oswald',sans-serif; font-size:1.3rem; text-transform:uppercase; margin-bottom:1rem;">Organisation des Passages de Grades (Kyu)</h3>
-        <p style="font-size:0.92rem; color:#555;">Les passages de ceintures au sein de l'École Arts Martiaux de Brunoy valident l'assiduité, la précision technique des katas et le comportement martial au dojo.</p>
+        <p style="font-size:0.92rem; color:#555;">Les passages de ceintures valident l'assiduité, la précision technique et le comportement martial.</p>
         <div style="background:#f9f9f9; border:1px solid #eee; padding:1.25rem; margin:1rem 0;">
-          <h4 style="font-family:'Oswald',sans-serif; font-size:1.1rem; color:#111; margin-bottom:0.4rem;">Dates Prévisionnelles Saison 2026/2027 :</h4>
+          <h4 style="font-family:'Oswald',sans-serif; font-size:1.1rem; color:#111; margin-bottom:0.4rem;">Dates Prévisionnelles 2026/2027 :</h4>
           <ul style="line-height:1.8; font-size:0.9rem;">
-            <li><strong>Session Hiver :</strong> Vendredi 18 décembre 2026 (Karaté enfants & adultes)</li>
-            <li><strong>Session Printemps :</strong> Samedi 27 mars 2027 (Évaluation technique & armes Kobudo)</li>
-            <li><strong>Session Finale & Cérémonie :</strong> Vendredi 18 juin 2027 (Remise officielle des ceintures)</li>
+            <li><strong>Session Hiver :</strong> Vendredi 18 décembre 2026</li>
+            <li><strong>Session Printemps :</strong> Samedi 27 mars 2027</li>
+            <li><strong>Session Finale :</strong> Vendredi 18 juin 2027 (Remise des ceintures)</li>
           </ul>
         </div>
-        <p style="font-size:0.85rem; color:#666;">Pour les passages de ceintures noires (1er Dan et supérieur), les épreuves se déroulent auprès du Comité Départemental de l'Essonne FFKaraté.</p>
+        <p style="font-size:0.85rem; color:#666;">Pour les ceintures noires (1er Dan+), épreuves au Comité Départemental de l'Essonne FFKaraté.</p>
       </div>
     `;
   }
@@ -792,8 +565,7 @@ function openDocModal(docType) {
 }
 
 function closeDocModal() {
-  var overlay = document.getElementById('docModalOverlay');
-  overlay.classList.remove('open');
+  document.getElementById('docModalOverlay').classList.remove('open');
 }
 
 document.getElementById('docModalOverlay').addEventListener('click', function(e) {
